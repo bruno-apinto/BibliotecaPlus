@@ -1,5 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
+#include "Livro.h"
+#include "Livro.cpp"
 
 #include <string>
 #include <vector>
@@ -9,7 +11,6 @@ public:
     Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
 
     void ConsultarDados();
-    void ProcurarLivros(std::string busca);
     void ConsultarSituacao();
     std::vector<Livro> ProcurarLivrosPorTitulo(std::string titulo);
     std::vector<Livro> ProcurarLivrosPorAutor(std::string autor);
@@ -35,5 +36,4 @@ private:
     Pessoa usuario;
     Situacao situacao;
 };
-
-#endif
+#endif ALUNO_H

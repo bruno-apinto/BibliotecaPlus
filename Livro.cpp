@@ -1,30 +1,44 @@
 #include "Livro.h"
 
-Livro::Livro(std::string titulo, std::string autor, std::string editora, std::string detalhesLivro)
-    {
-        
-    nome = titulo ;
-    autor =autor ;
-    ano = ano ;
-    edicao = edicao;
-    secao = secao ;
-    bibliotecas = bibliotecas;
-    editora = editora;
-    numero = numero;
-//    SituacaoEmprestimo situacao;
+Livro::Livro(std::string nome, std::string autor, std::string ano, std::string edicao, std::string secao, std::string bibliotecas, std::string editora, std::string numero)
+    : nome(nome), autor(autor), ano(ano), edicao(edicao), secao(secao), bibliotecas(bibliotecas), editora(editora), numero(numero), situacao(SituacaoEmprestimo::Disponivel) {}
 
-
-    }
-
-std::string Livro::Titulo() const {
-    return titulo;
+std::string Livro::GetNome() const {
+    return nome;
 }
-std::string Livro::Autor() const {
+
+std::string Livro::GetAutor() const {
     return autor;
 }
-std::string Livro::Editora() const {
+
+std::string Livro::GetAno() const {
+    return ano;
+}
+
+std::string Livro::GetEdicao() const {
+    return edicao;
+}
+
+std::string Livro::GetSecao() const {
+    return secao;
+}
+
+std::string Livro::GetBibliotecas() const {
+    return bibliotecas;
+}
+
+std::string Livro::GetEditora() const {
     return editora;
 }
-std::string Livro::DetalhesLivro() const {
-    return detalhesLivro;
+
+std::string Livro::GetNumero() const {
+    return numero;
+}
+
+SituacaoEmprestimo Livro::GetSituacao() const {
+    return situacao;
+}
+
+void Livro::SetSituacao(SituacaoEmprestimo novaSituacao) {
+    situacao = novaSituacao;
 }
