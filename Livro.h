@@ -13,10 +13,15 @@ public:
     std::string DetalhesLivro() const;
 
 private:
-    std::string titulo;
+    std::string nome;
     std::string autor;
+    std::string ano;
+    std::string edicao;
+    std::string secao;
+    std::string bibliotecas;
     std::string editora;
-    std::string detalhesLivro;
+    std::string numero;
+    SituacaoEmprestimo situacao;
 };
 
 #endif
