@@ -1,7 +1,20 @@
 #include "Livro.h"
 
 Livro::Livro(std::string titulo, std::string autor, std::string editora, std::string detalhesLivro)
-    : titulo(titulo), autor(autor), editora(editora), detalhesLivro(detalhesLivro) {}
+    {
+        
+    nome = titulo ;
+    autor =autor ;
+    ano = ano ;
+    edicao = edicao;
+    secao = secao ;
+    bibliotecas = bibliotecas;
+    editora = editora;
+    numero = numero;
+//    SituacaoEmprestimo situacao;
+
+
+    }
 
 std::string Livro::Titulo() const {
     return titulo;
