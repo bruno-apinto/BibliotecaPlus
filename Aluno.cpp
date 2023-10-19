@@ -26,7 +26,7 @@ void Alunos::ConsultarDados() {
 std::vector<Livro> Alunos::ProcurarLivrosPorTitulo(std::string titulo) {
     std::vector<Livro> livrosEncontrados;
     for (const Livro& livro : listaDeLivros) {
-        if (livro.GetTitulo() == titulo) {
+        if (livro.Titulo() == titulo) {
             livrosEncontrados.push_back(livro);
         }
     }
@@ -36,7 +36,7 @@ std::vector<Livro> Alunos::ProcurarLivrosPorTitulo(std::string titulo) {
 std::vector<Livro> Alunos::ProcurarLivrosPorAutor(std::string autor) {
     std::vector<Livro> livrosEncontrados;
     for (const Livro& livro : listaDeLivros) {
-        if (livro.GetAutor() == autor) {
+        if (livro.Autor() == autor) {
             livrosEncontrados.push_back(livro);
         }
     }
@@ -46,7 +46,7 @@ std::vector<Livro> Alunos::ProcurarLivrosPorAutor(std::string autor) {
 std::vector<Livro> Alunos::ProcurarLivrosPorEditora(std::string editora) {
     std::vector<Livro> livrosEncontrados;
     for (const Livro& livro : listaDeLivros) {
-        if (livro.GetEditora() == editora) {
+        if (livro.Editora() == editora) {
             livrosEncontrados.push_back(livro);
         }
     }
