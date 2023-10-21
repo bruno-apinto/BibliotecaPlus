@@ -46,3 +46,17 @@ SituacaoEmprestimo Livro::getSituacao() const {
 void Livro::setSituacao(SituacaoEmprestimo novaSituacao) {
     situacao = novaSituacao;
 }
+
+bool Livro::comparar (Livro& livro){
+    int indice = 1;
+
+    indice *= livro.ano.compare(ano);
+    indice *= livro.nome.compare(nome);
+    indice *= livro.autor.compare(autor);
+    indice *= livro.edicao.compare(edicao);
+    indice *= livro.secao.compare(secao);
+    indice *= livro.editora.compare(editora);
+    indice *= livro.numero.compare(numero);
+
+    return indice;
+}
