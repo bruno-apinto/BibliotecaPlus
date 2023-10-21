@@ -1,8 +1,11 @@
 #include "Aluno.h"
 #include "Livro.h"
 #include <iostream>
+#include <string.h>
 
-Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula) {
+Alunos::Alunos(std::string nome, std::string telefone, std::string login,
+                 std::string senha, std::string email, std::string matricula)
+{
     usuario.nome = nome;
     usuario.telefone = telefone;
     usuario.login = login;
@@ -26,24 +29,59 @@ void Alunos::ConsultarDados() {
 std::vector<Livro> Alunos::ProcurarLivrosPorTitulo(std::string titulo) {
     std::vector<Livro> livrosEncontrados;
    // for (const Livro& livro : listaDeLivros) {
-        if (livro.Titulo() == titulo) {
-            livrosEncontrados.push_back(livro);
-        }
+       // if (livro.Titulo() == titulo) {
+           // livrosEncontrados.push_back(livro);
+       // }
    // }
-    return livrosEncontrados;
+   // return livrosEncontrados;
 }
 
-std::vector<Livro> Alunos::ProcurarLivrosPorAutor(std::string autor) {
-    std::vector<Livro> livrosEncontrados;
-    for (const Livro& livro : listaDeLivros) {
-        if (livro.Autor() == autor) {
-            livrosEncontrados.push_back(livro);
+
+   
+std::vector<Livro> Alunos::ProcurarLivros
+    (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados) {
+    
+    if (!(parametro.compare("Autor"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+            
+            if (*it.comparar() == true){
+                
+            }
         }
     }
-    return livrosEncontrados;
+
+    else if (!(parametro.compare("Autor"))){
+
+    }
+
+    else if (!(parametro.compare("Nome"))){
+
+    }
+
+    else if (!(parametro.compare("Editora"))){
+
+    }
+
+    else if (!(parametro.compare("Ano"))){
+
+    }
+
+    else if (!(parametro.compare("Edicao"))){
+
+    }
+
+    else if (!(parametro.compare("Numero"))){
+
+    }
+
+    else if (!(parametro.compare("Secao"))){
+
+    }
 }
 
-std::vector<Livro> Alunos::ProcurarLivrosPorEditora(std::string editora) {
+std::vector<Livro> Alunos::procurarLivrosPorEditora(std::string editora) {
     std::vector<Livro> livrosEncontrados;
     for (const Livro& livro : listaDeLivros) {
         if (livro.Editora() == editora) {

@@ -12,18 +12,22 @@ enum class SituacaoEmprestimo {
 
 class Livro {
 public:
-    Livro(std::string nome, std::string autor, std::string ano, std::string edicao, std::string secao, std::string bibliotecas, std::string editora, std::string numero);
+    Livro::Livro (std::string nome, std::string autor, std::string ano, 
+        std::string edicao, std::string secao, std::string bibliotecas,
+        std::string editora, std::string numero);
 
-    std::string GetNome() const;
-    std::string GetAutor() const;
-    std::string GetAno() const;
-    std::string GetEdicao() const;
-    std::string GetSecao() const;
-    std::string GetBibliotecas() const;
-    std::string GetEditora() const;
-    std::string GetNumero() const;
-    SituacaoEmprestimo GetSituacao() const;
-    void SetSituacao(SituacaoEmprestimo novaSituacao);
+    std::string getNome() const;
+    std::string getAutor() const;
+    std::string getAno() const;
+    std::string getEdicao() const;
+    std::string getSecao() const;
+    std::string getBibliotecas() const;
+    std::string getEditora() const;
+    std::string getNumero() const;
+    SituacaoEmprestimo getSituacao() const;
+    void setSituacao(SituacaoEmprestimo novaSituacao);
+
+    bool Livro::comparar (Livro& livro);
 
 private:
     std::string nome;

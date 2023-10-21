@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-#include "Bibliotecario.h"
-#include "Aluno.h"
-#include "Aluno.cpp"
-=======
 
 #include "Bibliotecario.h"
 #include "Aluno.h"
 #include "Livro.h"
->>>>>>> bd6bc04 (Bibliotecario)
 
 Bibliotecario::Bibliotecario(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula)
     : acervo(), cadastros() {
