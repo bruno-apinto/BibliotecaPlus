@@ -25,11 +25,11 @@ void Alunos::ConsultarDados() {
 
 std::vector<Livro> Alunos::ProcurarLivrosPorTitulo(std::string titulo) {
     std::vector<Livro> livrosEncontrados;
-    for (const Livro& livro : listaDeLivros) {
+   // for (const Livro& livro : listaDeLivros) {
         if (livro.Titulo() == titulo) {
             livrosEncontrados.push_back(livro);
         }
-    }
+   // }
     return livrosEncontrados;
 }
 

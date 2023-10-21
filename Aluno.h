@@ -5,6 +5,7 @@
 
 #include <string>
 #include <vector>
+#include "Structs.h"
 
 class Alunos {
 public:
@@ -16,7 +17,7 @@ public:
     std::vector<Livro> ProcurarLivrosPorAutor(std::string autor);
     std::vector<Livro> ProcurarLivrosPorEditora(std::string editora);
 
-private:
+    /*
     struct Pessoa {
         std::string nome;
         std::string telefone;
@@ -32,6 +33,7 @@ private:
         std::vector<std::string> livrosEmprestados;
         std::vector<std::string> historicoEmprestimos;
     };
+    */
 
     Pessoa usuario;
     Situacao situacao;
