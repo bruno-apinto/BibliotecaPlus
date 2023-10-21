@@ -1,9 +1,11 @@
 #include "Livro.h"
+#include <iostream>
+#include <string>
+#include <vector>
 
 Livro::Livro(std::string nome, std::string autor, std::string ano,
     std::string edicao, std::string secao, std::string bibliotecas, 
-    std::string editora, std::string numero) :
-        nome(nome), autor(autor), ano(ano),
+    std::string editora, std::string numero) : nome(nome), autor(autor), ano(ano),
         edicao(edicao), secao(secao), bibliotecas(bibliotecas),
         editora(editora), numero(numero), situacao(SituacaoEmprestimo::Disponivel) {}
 
@@ -59,4 +61,105 @@ bool Livro::comparar (Livro& livro){
     indice *= livro.numero.compare(numero);
 
     return indice;
+}
+
+std::vector<Livro> Livro::procurarLivros
+    (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados) {
+    
+    if (!(parametro.compare("Autor"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->autor.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+    }
+
+    else if (!(parametro.compare("Nome"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->nome.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Editora"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->editora.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Ano"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->ano.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Edicao"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->edicao.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Numero"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->numero.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Secao"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->secao.compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
 }

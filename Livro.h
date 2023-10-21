@@ -29,7 +29,13 @@ public:
 
     bool Livro::comparar (Livro& livro);
 
+
+    //retorna um vector de livros encontrados que "batem" com os parâmetros buscados
+    std::vector<Livro> procurarLivros 
+            (std::string parametro, std::string item, std::vector<Livro> livrosEncontradoss);
+
 private:
+
     std::string nome;
     std::string autor;
     std::string ano;
