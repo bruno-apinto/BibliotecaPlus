@@ -38,4 +38,21 @@ public:
     Pessoa usuario;
     Situacao situacao;
 };
+
+/**
+     * @brief caracteristicas da situação do aluno:
+     * pendencia (true/false)
+     * multa (int)
+     * livrosEmprestados (vector)
+     * historicoEmprestimos (vector)
+     * 
+     */
+
+    struct Situacao {
+        bool pendencia;
+        int multa;
+        std::vector<std::string> livrosEmprestados;
+        std::vector<std::string> historicoEmprestimos;
+    };
+    
 #endif ALUNO_H

@@ -11,9 +11,4 @@
         std::string matricula;
     };
 
-    struct Situacao {
-        bool pendencia;
-        int multa;
-        std::vector<std::string> livrosEmprestados;
-        std::vector<std::string> historicoEmprestimos;
-    };
+    

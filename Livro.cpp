@@ -3,6 +3,18 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief Construct a new Livro:: Livro object
+ * 
+ * @param nome 
+ * @param autor 
+ * @param ano 
+ * @param edicao 
+ * @param secao 
+ * @param biblioteca 
+ * @param editora 
+ * @param numero 
+ */
 Livro::Livro(std::string nome, std::string autor, std::string ano,
     std::string edicao, std::string secao, std::string biblioteca, 
     std::string editora, std::string numero) : nome_(nome), autor_(autor), ano_(ano),
@@ -47,7 +59,7 @@ SituacaoEmprestimo Livro::getSituacao() const {
 
 
 bool Livro::comparar (Livro& livro){
-
+   
     int indice = 1; //variavel auxiliar para comparar livros
 
     indice *= livro.getAno().compare(ano_);
@@ -62,6 +74,7 @@ bool Livro::comparar (Livro& livro){
 }
 
 std::vector<Livro> Livro::procurarLivros
+
     (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados) {
     
     if (!(parametro.compare("Autor"))){
