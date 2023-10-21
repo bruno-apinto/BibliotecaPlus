@@ -4,61 +4,59 @@
 #include <vector>
 
 Livro::Livro(std::string nome, std::string autor, std::string ano,
-    std::string edicao, std::string secao, std::string bibliotecas, 
-    std::string editora, std::string numero) : nome(nome), autor(autor), ano(ano),
-        edicao(edicao), secao(secao), bibliotecas(bibliotecas),
-        editora(editora), numero(numero), situacao(SituacaoEmprestimo::Disponivel) {}
+    std::string edicao, std::string secao, std::string biblioteca, 
+    std::string editora, std::string numero) : nome_(nome), autor_(autor), ano_(ano),
+        edicao_(edicao), secao_(secao), biblioteca_(biblioteca),
+        editora_(editora), numero_(numero), situacao_(SituacaoEmprestimo::Disponivel) {}
 
 std::string Livro::getNome() const {
-    return nome;
+    return nome_;
 }
 
 std::string Livro::getAutor() const {
-    return autor;
+    return autor_;
 }
 
 std::string Livro::getAno() const {
-    return ano;
+    return ano_;
 }
 
 std::string Livro::getEdicao() const {
-    return edicao;
+    return edicao_;
 }
 
 std::string Livro::getSecao() const {
-    return secao;
+    return secao_;
 }
 
-std::string Livro::getBibliotecas() const {
-    return bibliotecas;
+std::string Livro::getBiblioteca() const {
+    return biblioteca_;
 }
 
 std::string Livro::getEditora() const {
-    return editora;
+    return editora_;
 }
 
 std::string Livro::getNumero() const {
-    return numero;
+    return numero_;
 }
 
 SituacaoEmprestimo Livro::getSituacao() const {
-    return situacao;
+    return situacao_;
 }
 
-void Livro::setSituacao(SituacaoEmprestimo novaSituacao) {
-    situacao = novaSituacao;
-}
 
 bool Livro::comparar (Livro& livro){
-    int indice = 1;
 
-    indice *= livro.ano.compare(ano);
-    indice *= livro.nome.compare(nome);
-    indice *= livro.autor.compare(autor);
-    indice *= livro.edicao.compare(edicao);
-    indice *= livro.secao.compare(secao);
-    indice *= livro.editora.compare(editora);
-    indice *= livro.numero.compare(numero);
+    int indice = 1; //variavel auxiliar para comparar livros
+
+    indice *= livro.getAno().compare(ano_);
+    indice *= livro.getNome().compare(nome_);
+    indice *= livro.getAutor().compare(autor_);
+    indice *= livro.getEdicao().compare(edicao_);
+    indice *= livro.getSecao().compare(secao_);
+    indice *= livro.getEditora().compare(editora_);
+    indice *= livro.getNumero().compare(numero_);
 
     return indice;
 }
@@ -71,7 +69,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->autor.compare(item)){
+            if (it->getAutor().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -84,7 +82,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->nome.compare(item)){
+            if (it->getNome().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -98,7 +96,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->editora.compare(item)){
+            if (it->getEditora().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -112,7 +110,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->ano.compare(item)){
+            if (it->getAno().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -126,7 +124,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->edicao.compare(item)){
+            if (it->getEdicao().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -140,7 +138,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->numero.compare(item)){
+            if (it->getNumero().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -154,7 +152,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->secao.compare(item)){
+            if (it->getSecao().compare(item)){
                 auxiliar.push_back(*it);
             }
         }

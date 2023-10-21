@@ -21,6 +21,13 @@ public:
     void EditarCadastrosEditarPessoa(const std::string& matricula, const std::string& novoNome, const std::string& novaSenha, const std::string& novoEmail);
     void EmprestarLivro(const Alunos& aluno, const Livro& livro);
     void ReceberLivro(const Alunos& aluno, const Livro& livro);
+    
+    /**
+     * @brief Set the Situacao object
+     * 
+     * @param novaSituacao 
+     */
+    void setSituacao(SituacaoEmprestimo novaSituacao);
 
 private:
     struct Pessoa {

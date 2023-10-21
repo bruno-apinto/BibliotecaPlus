@@ -39,3 +39,8 @@ void Bibliotecario::EditarCadastrosRemoverPessoa(const std::string& matricula) {
 }
 
 void Bibliotecario::EditarCadastrosEditarPessoa(const std::string& matricula, const std::string& novoNome, const std.
+
+
+void Livro::setSituacao(SituacaoEmprestimo novaSituacao) {
+    situacao_ = novaSituacao;
+}
