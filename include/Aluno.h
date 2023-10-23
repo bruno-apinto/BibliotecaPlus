@@ -20,9 +20,9 @@ class Alunos {
 public:
     Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
 
-    void ConsultarDados();
-    void ConsultarSituacao();
-    std::vector<Livro> ProcurarLivrosPorTitulo(std::string titulo);
+    void ConsultarDados(); // função que mostra os dados do aluno
+    void ConsultarSituacao(); // função que mostra a situação (se há empréstimos, pendências...)
+    std::vector<Livro> ProcurarLivrosPorTitulo(std::string titulo); 
     std::vector<Livro> ProcurarLivrosPorAutor(std::string autor);
     std::vector<Livro> ProcurarLivrosPorEditora(std::string editora);
 
@@ -57,10 +57,10 @@ public:
      * 
      */
     struct Situacao {
-        bool pendencia;
-        int multa;
-        std::vector<std::string> livrosEmprestados;
-        std::vector<std::string> historicoEmprestimos;
+        bool pendencia; // atributo booleano que indica se existe pendência ou não
+        int multa; // valor da multa a ser paga
+        std::vector<std::string> livrosEmprestados; // lista com os livros atualmente emprestados para o aluno
+        std::vector<std::string> historicoEmprestimos; // lista com os livros já emprestados ao usuário
     };
     
 #endif ALUNO_H
