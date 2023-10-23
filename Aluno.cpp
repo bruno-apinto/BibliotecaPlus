@@ -15,7 +15,8 @@ Alunos::Alunos(std::string nome, std::string telefone, std::string login,
 
     situacao.pendencia = false;
     situacao.multa = 0;
-    // Inicializar outras informações da Situação, como livrosEmprestados e historicoEmprestimos, conforme necessário.
+    situacao.livrosEmprestados.clear();
+    situacao.historicoEmprestimos.clear();
 }
 
 void Alunos::ConsultarDados() {
