@@ -123,6 +123,7 @@ private:
     std::string biblioteca_;
     std::string editora_;
     std::string numero_;
+    int dataEmprestimo_;
     SituacaoEmprestimo situacao_;
 };
 
