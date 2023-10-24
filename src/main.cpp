@@ -1,9 +1,5 @@
 #include <iostream>
 #include <string>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 #include <Aluno.h>
 
 typedef struct key {
@@ -11,11 +7,6 @@ typedef struct key {
     int permissao;
 }key;
 
-<<<<<<< HEAD
-=======
->>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
-=======
->>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
 void inserirLogin(std::string& login){
 
@@ -36,16 +27,10 @@ void inserirLogin(std::string& login){
 void inserirSenha (std::string& senha){
 
     std::cout << "Insira sua senha:\n";
-<<<<<<< HEAD
-=======
-
->>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
     std::cin >> senha;
     
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @brief 
      * 
@@ -138,8 +123,6 @@ int main(){
             inserirSenha(senha);
 
             //Conferir senha
-<<<<<<< HEAD
-<<<<<<< HEAD
             Pessoa usuario;
             key chave_;
             chave_ = validarSenha (login, senha, usuario);

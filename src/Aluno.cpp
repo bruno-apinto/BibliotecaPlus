@@ -19,7 +19,7 @@ Alunos::Alunos(std::string nome, std::string telefone, std::string login,
     situacao.historicoEmprestimos.clear();
 }
 
-void Alunos::ConsultarDados() {
+void Alunos::consultarDados() {
     std::cout << "Nome: " << usuario.nome << std::endl;
     std::cout << "Telefone: " << usuario.telefone << std::endl;
     std::cout << "Login: " << usuario.login << std::endl;
@@ -27,3 +27,5 @@ void Alunos::ConsultarDados() {
     std::cout << "Matrícula: " << usuario.matricula << std::endl;
 }
 
+
+void consultarSituacao()

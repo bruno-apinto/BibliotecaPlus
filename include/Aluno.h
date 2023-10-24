@@ -5,19 +5,6 @@
 
 #include <string>
 #include <vector>
-<<<<<<< HEAD
-
-struct Pessoa {
-        std::string nome;
-        std::string telefone;
-        std::string login;
-        std::string senha;
-        std::string email;
-        std::string matricula;
-    };
-
-=======
->>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
 struct Pessoa {
         std::string nome;
@@ -32,12 +19,10 @@ struct Pessoa {
 class Alunos {
 public:
     Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
-
-    void ConsultarDados(); // função que mostra os dados do aluno
-    void ConsultarSituacao(); // função que mostra a situação (se há empréstimos, pendências...)
-    std::vector<Livro> ProcurarLivrosPorTitulo(std::string titulo); 
-    std::vector<Livro> ProcurarLivrosPorAutor(std::string autor);
-    std::vector<Livro> ProcurarLivrosPorEditora(std::string editora);
+    
+    Alunos::procurarAlunos(); // função que encontra o aluno dentro do arquivo
+    void consultarDados(); // função que mostra os dados do aluno
+    void consultarSituacao(); // função que mostra a situação (se há empréstimos, pendências...)
 
     /*
     struct Pessoa {
@@ -61,7 +46,7 @@ public:
     Situacao situacao;
 };
 
-    /**
+/**
      * @brief caracteristicas da situação do aluno:
      * pendencia (true/false)
      * multa (int)
@@ -69,6 +54,7 @@ public:
      * historicoEmprestimos (vector)
      * 
      */
+
     struct Situacao {
         bool pendencia; // atributo booleano que indica se existe pendência ou não
         int multa; // valor da multa a ser paga
