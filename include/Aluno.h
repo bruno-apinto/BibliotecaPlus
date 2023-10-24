@@ -1,7 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
 #include "Livro.h"
-#include "Livro.cpp"
+#include "src/Livro.cpp"
 
 #include <string>
 #include <vector>
