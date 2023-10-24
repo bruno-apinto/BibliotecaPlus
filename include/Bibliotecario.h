@@ -6,6 +6,15 @@
 #include <string>
 #include <vector>
 
+struct Pessoa {
+        std::string nome;
+        std::string telefone;
+        std::string login;
+        std::string senha;
+        std::string email;
+        std::string matricula;
+    };
+
 class Bibliotecario {
 public:
     Bibliotecario(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
