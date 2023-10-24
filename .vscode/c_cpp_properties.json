@@ -3,10 +3,22 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "intelliSenseMode": "macos-gcc-arm64",
+            "compilerPath": "/usr/bin/g++"
+        },
+        {
+            "name": "caminho include",
+            "includePath": [
+                "${workspaceFolder}/../include/"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
             "compilerPath": "/usr/bin/g++"
         }
     ],

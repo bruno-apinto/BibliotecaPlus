@@ -5,7 +5,6 @@
 
 #include <string>
 #include <vector>
-#include "Structs.h"
 
 struct Pessoa {
         std::string nome;
