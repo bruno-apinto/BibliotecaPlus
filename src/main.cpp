@@ -1,5 +1,12 @@
 #include <iostream>
 #include <string>
+#include <Aluno.h>
+
+typedef struct key {
+    Pessoa alguem;
+    int permissao;
+}key;
+
 
 void inserirLogin(std::string& login){
 
@@ -25,10 +32,14 @@ void inserirSenha (std::string& senha){
     
 }
 
-bool validarSenha (std::string& login, std::string& senha){
+key validarSenha (std::string& login, std::string& senha, Pessoa& usuario){
     //conferir se o usuario e as senhas são validos
+    key chave;
 
-    return true;
+    //procurar usuario
+    //se existir bibliotecario == 1, aluno == 2, ngm == 0
+
+    return chave;
 }
 
 int main(){
@@ -60,13 +71,22 @@ int main(){
             inserirSenha(senha);
 
             //Conferir senha
-            Pessoa::Pessoa usuario;
-            input = validarSenha (login, senha, usuario);
+            Pessoa usuario;
+            key chave_;
+            chave_ = validarSenha (login, senha, usuario);
 
-            if (input) {
+            if (chave_.permissao == 1) {
+                
+            }
+
+            else if (chave_.permissao == 2){
 
             }
-            else {continue;}
+            else {
+                std::cout << "\nUSUARIO E/OU LOGIN INVALIDOS!\n";
+                std::cout << "Refaça o login\n";
+                continue;
+            }
 
         }
 
