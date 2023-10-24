@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+<<<<<<< HEAD
 #include <Aluno.h>
 
 typedef struct key {
@@ -7,6 +8,8 @@ typedef struct key {
     int permissao;
 }key;
 
+=======
+>>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
 
 void inserirLogin(std::string& login){
 
@@ -27,10 +30,15 @@ void inserirLogin(std::string& login){
 void inserirSenha (std::string& senha){
 
     std::cout << "Insira sua senha:\n";
+<<<<<<< HEAD
+=======
+
+>>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
     std::cin >> senha;
     
 }
 
+<<<<<<< HEAD
     /**
      * @brief 
      * 
@@ -75,6 +83,12 @@ void acessoAluno (Alunos& aluno, int& input){
             break;
         }
     }
+=======
+bool validarSenha (std::string& login, std::string& senha){
+    //conferir se o usuario e as senhas são validos
+
+    return true;
+>>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
 }
 
 int main(){
@@ -106,6 +120,7 @@ int main(){
             inserirSenha(senha);
 
             //Conferir senha
+<<<<<<< HEAD
             Pessoa usuario;
             key chave_;
             chave_ = validarSenha (login, senha, usuario);
@@ -124,6 +139,15 @@ int main(){
                 std::cout << "Refaça o login\n";
                 continue;
             }
+=======
+            Pessoa::Pessoa usuario;
+            input = validarSenha (login, senha, usuario);
+
+            if (input) {
+
+            }
+            else {continue;}
+>>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
 
         }
 
