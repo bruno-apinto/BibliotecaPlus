@@ -5,6 +5,7 @@
 
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 
 struct Pessoa {
         std::string nome;
@@ -15,6 +16,8 @@ struct Pessoa {
         std::string matricula;
     };
 
+=======
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
 struct Pessoa {
         std::string nome;

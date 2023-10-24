@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 #include <Aluno.h>
 
 typedef struct key {
@@ -8,8 +11,11 @@ typedef struct key {
     int permissao;
 }key;
 
+<<<<<<< HEAD
 =======
 >>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
+=======
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
 void inserirLogin(std::string& login){
 
@@ -38,6 +44,7 @@ void inserirSenha (std::string& senha){
     
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @brief 
@@ -85,10 +92,21 @@ void acessoAluno (Alunos& aluno, int& input){
     }
 =======
 bool validarSenha (std::string& login, std::string& senha){
+=======
+key validarSenha (std::string& login, std::string& senha, Pessoa& usuario){
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
     //conferir se o usuario e as senhas são validos
+    key chave;
 
+<<<<<<< HEAD
     return true;
 >>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
+=======
+    //procurar usuario
+    //se existir bibliotecario == 1, aluno == 2, ngm == 0
+
+    return chave;
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 }
 
 int main(){
@@ -121,6 +139,7 @@ int main(){
 
             //Conferir senha
 <<<<<<< HEAD
+<<<<<<< HEAD
             Pessoa usuario;
             key chave_;
             chave_ = validarSenha (login, senha, usuario);
@@ -142,12 +161,29 @@ int main(){
 =======
             Pessoa::Pessoa usuario;
             input = validarSenha (login, senha, usuario);
+=======
+            Pessoa usuario;
+            key chave_;
+            chave_ = validarSenha (login, senha, usuario);
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
-            if (input) {
+            if (chave_.permissao == 1) {
+                
+            }
+
+            else if (chave_.permissao == 2){
 
             }
+<<<<<<< HEAD
             else {continue;}
 >>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
+=======
+            else {
+                std::cout << "\nUSUARIO E/OU LOGIN INVALIDOS!\n";
+                std::cout << "Refaça o login\n";
+                continue;
+            }
+>>>>>>> 3f71ac4 (Primeira versão do main.cpp)
 
         }
 
