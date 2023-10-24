@@ -27,19 +27,54 @@ void inserirLogin(std::string& login){
 void inserirSenha (std::string& senha){
 
     std::cout << "Insira sua senha:\n";
-
     std::cin >> senha;
     
 }
 
+    /**
+     * @brief 
+     * 
+     * @param login 
+     * @param senha 
+     * @param usuario 
+     * @return key  1 = Bibliotecario, 2 = Aluno, 0 = Ninguem
+     */
 key validarSenha (std::string& login, std::string& senha, Pessoa& usuario){
     //conferir se o usuario e as senhas são validos
+
+    /**
+     * @brief  1 = Bibliotecario, 2 = Aluno, 0 = Ninguem
+     * 
+     */
     key chave;
 
     //procurar usuario
     //se existir bibliotecario == 1, aluno == 2, ngm == 0
 
     return chave;
+}
+
+void acessoAluno (Alunos& aluno, int& input){
+    input = 1;
+    while(input) {
+        std::cout << "\nOpcoes:\n";
+        std::cout << "\n[1] - Consultar dados de cadastro\n[2] - Consultar situacao\n";
+        std::cout << "[3] - Voltar\n";
+        std::cin >> input;
+
+        if (input == 1) {
+            aluno.consultarDados();
+            input = 1;
+        }
+        else if (input == 2){
+            aluno.consultarSituacao();
+            input = 1;
+        }
+        else {
+            input = -1;
+            break;
+        }
+    }
 }
 
 int main(){
@@ -80,7 +115,9 @@ int main(){
             }
 
             else if (chave_.permissao == 2){
-
+                input = 0;
+                
+                acessoAluno(estudante, input);
             }
             else {
                 std::cout << "\nUSUARIO E/OU LOGIN INVALIDOS!\n";

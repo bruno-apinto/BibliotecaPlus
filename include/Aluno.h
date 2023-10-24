@@ -48,7 +48,7 @@ public:
     Situacao situacao;
 };
 
-/**
+    /**
      * @brief caracteristicas da situação do aluno:
      * pendencia (true/false)
      * multa (int)
@@ -56,7 +56,6 @@ public:
      * historicoEmprestimos (vector)
      * 
      */
-
     struct Situacao {
         bool pendencia;
         int multa;
