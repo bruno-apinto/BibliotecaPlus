@@ -86,7 +86,6 @@ Atributos:
     - dataEmprestimo_ (int): Armazena a data em que o livro foi emprestado, se aplicável.
     - situacao_ (SituacaoEmprestimo): Um enum que indica a situação do empréstimo do livro, que pode ser "Disponível," "Emprestado," "Atrasado" ou "Perdido."
 
-<<<<<<< HEAD
 Métodos:
 
     - Livro::Livro: Construtor da classe Livro. Ele inicializa todos os atributos do livro com os valores fornecidos.
@@ -136,3 +135,17 @@ Instruções de uso:
     - Seguir as instruções que forem dadas durante o uso.
 =======
 >>>>>>> 4564e65 (atualizado)
+=======
+Estrutura do projeto:
+- src: Este diretório contém o código-fonte do sistema. Aqui você encontrará os arquivos das classes Alunos, Bibliotecario, Livro, Notificacao, e outros componentes relacionados ao funcionamento do sistema.
+
+- include: Neste diretório, estão localizados os arquivos de cabeçalho (headers) que declaram as classes e métodos utilizados no código-fonte. É onde você encontrará os arquivos .h que descrevem as interfaces das classes.
+
+- doc: A pasta "doc" contém a documentação do projeto. Aqui, você encontrará informações detalhadas sobre a estrutura do código, a descrição das classes, métodos e atributos, bem como informações sobre como usar o sistema.
+
+- test: Este diretório contém os testes unitários e de integração do sistema. Os testes são usados para verificar se o código está funcionando conforme o esperado e se não há regressões ao fazer alterações no código.
+
+- bin: É o diretório onde os arquivos executáveis são gerados após a compilação do código-fonte. Aqui, você encontrará o executável principal do sistema, que pode ser usado para iniciar a aplicação.
+
+- data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
+>>>>>>> 56d7632 (README)
