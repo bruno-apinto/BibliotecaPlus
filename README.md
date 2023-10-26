@@ -146,12 +146,3 @@ Estrutura do projeto:
 - bin: É o diretório onde os arquivos executáveis são gerados após a compilação do código-fonte. Aqui, você encontrará o executável principal do sistema, que pode ser usado para iniciar a aplicação.
 
 - data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
-
-Principais dificuldades:
-- Integração das classes: Garantir que as classes Alunos, Bibliotecario, Livro e Notificacao se integrassem de maneira eficaz, com troca de informações e funcionalidades entre elas.
-
-- Cálculo de multas e gestão de datas: Implementar um sistema eficiente de cálculo de multas com base em datas e lidar com a gestão de datas para empréstimos e devoluções de livros.
-
-- Envio de notificações por email: Configurar e integrar a funcionalidade de envio de notificações por email, garantindo que as notificações fossem enviadas aos alunos com pendências de forma correta.
-
--Testes e validação: Desenvolver testes adequados e garantir que o sistema funcionasse conforme o esperado, incluindo a verificação de casos de uso, tratamento de erros e validação de entradas.
