@@ -133,9 +133,7 @@ Instruções de uso:
     - Executar o programa e realizar o login.
     - Selecionar o método que gostaria de acessar.
     - Seguir as instruções que forem dadas durante o uso.
-=======
->>>>>>> 4564e65 (atualizado)
-=======
+
 Estrutura do projeto:
 - src: Este diretório contém o código-fonte do sistema. Aqui você encontrará os arquivos das classes Alunos, Bibliotecario, Livro, Notificacao, e outros componentes relacionados ao funcionamento do sistema.
 
@@ -148,4 +146,3 @@ Estrutura do projeto:
 - bin: É o diretório onde os arquivos executáveis são gerados após a compilação do código-fonte. Aqui, você encontrará o executável principal do sistema, que pode ser usado para iniciar a aplicação.
 
 - data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
->>>>>>> 56d7632 (README)
