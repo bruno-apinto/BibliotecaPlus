@@ -1,5 +1,5 @@
-#ifndef ACERVOALUNOS_H
-#define ACERVOALUNOS_H
+#ifndef ACERVOLIVROS_H
+#define ACERVOLIVROS_H
 
 #include "Aluno.h"
 #include "Livro.h"
