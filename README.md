@@ -34,11 +34,10 @@ Requisitos não funcionais:
 Modelagem básica do sistema: 
     Terão quatro classes principais: Alunos, Bibliotecário, Livros e Notificação. 
 
-Classe Alunos: 
+Classe Aluno: 
 
 Atributos: 
 
-    - Pessoa usuario: Estrutura que armazena informações pessoais do aluno, incluindo nome, telefone, login, senha, email e matrícula.
     - Situacao situacao: Estrutura que registra a situação do aluno em relação a empréstimos de livros, incluindo se há pendências, o valor da multa a pagar e a lista de títulos de livros atualmente emprestados.
 
 Métodos: 
@@ -47,7 +46,7 @@ Métodos:
     - void Alunos::consultarDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
     - void Alunos::consultarSituacao(): Método que consulta a situação atual do aluno em relação aos empréstimos de livros, verificando se há pendências, o valor da multa e a lista de livros emprestados
     - std::vector<Livro> Alunos::procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite ao aluno procurar livros no acervo da biblioteca com base em parâmetros como autor, título, editora, etc.
-    - calcularMulta(dataDeDevolucao, dataAtual): Método que recebe as datas de devolução e data atual como entrada e calcula a multa com base na diferença entre essas datas. Esse método é fundamental para calcular multas devidas pelo aluno em caso de atraso na devolução. 
+    - calcularMulta(dataDevolucao, dataAtual): Método que recebe as datas de devolução e data atual como entrada e calcula a multa com base na diferença entre essas datas. Esse método é fundamental para calcular multas devidas pelo aluno em caso de atraso na devolução. 
 
 Estrutura Situacao:
 
@@ -59,19 +58,18 @@ Classe Bibliotecário:
 
 Atributos: 
 
-    - Pessoa: Uma estrutura que armazena informações pessoais do bibliotecário, como nome, telefone, login, senha, email e matrícula. Esses atributos identificam o bibliotecário no sistema.
     - acervo: Uma lista de objetos do tipo Livro que representa o acervo de livros da biblioteca. O bibliotecário pode adicionar, remover e editar livros no acervo.
     - cadastros: Uma lista de objetos do tipo Alunos que representa os registros de alunos. O bibliotecário pode adicionar, remover e editar cadastros de alunos.
 
 Métodos: 
 
     - procurarLivros(parametro, item, livrosEncontrados): Permite ao bibliotecário procurar livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
-    - editarAcervoAdicionarLivro(livro): Permite ao bibliotecário adicionar um livro ao acervo da biblioteca.
-    - editarAcervoRemoverLivro(titulo): Permite ao bibliotecário remover um livro do acervo com base no título do livro.
-    - editarAcervoEditarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite ao bibliotecário editar as informações de um livro no acervo com base no título. O bibliotecário pode atualizar o título, autor, editora e detalhes do livro.
-    - editarCadastrosAdicionarPessoa(aluno): Permite ao bibliotecário adicionar um novo cadastro de aluno ao sistema.
-    - editarCadastrosRemoverPessoa(matricula): Permite ao bibliotecário remover o cadastro de um aluno com base em sua matrícula.
-    - editarCadastrosEditarPessoa(matricula, novoNome, novaSenha, novoEmail): Permite ao bibliotecário editar as informações de um cadastro de aluno com base em sua matrícula. O bibliotecário pode atualizar o nome, senha e email do aluno.
+    - adicionarLivro(livro): Permite ao bibliotecário adicionar um livro ao acervo da biblioteca.
+    - removerLivro(titulo): Permite ao bibliotecário remover um livro do acervo com base no título do livro.
+    - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite ao bibliotecário editar as informações de um livro no acervo com base no título. O bibliotecário pode atualizar o título, autor, editora e detalhes do livro.
+    - adicionarPessoa(aluno): Permite ao bibliotecário adicionar um novo cadastro de aluno ao sistema.
+    - removerPessoa(matricula): Permite ao bibliotecário remover o cadastro de um aluno com base em sua matrícula.
+    - editarPessoa(matricula, novoNome, novaSenha, novoEmail): Permite ao bibliotecário editar as informações de um cadastro de aluno com base em sua matrícula. O bibliotecário pode atualizar o nome, senha e email do aluno.
     - emprestarLivro(aluno, livro): Permite ao bibliotecário registrar o empréstimo de um livro a um aluno. Isso atualiza a situação do livro para "emprestado".
     - receberLivro(aluno, livro): Permite ao bibliotecário registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
     - setSituacao(novaSituacao): Define a situação do empréstimo de um livro. Isso pode ser usado para atualizar a situação de um livro para "disponível", "atrasado" ou "perdido".
