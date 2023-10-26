@@ -86,6 +86,7 @@ Atributos:
     - dataEmprestimo_ (int): Armazena a data em que o livro foi emprestado, se aplicável.
     - situacao_ (SituacaoEmprestimo): Um enum que indica a situação do empréstimo do livro, que pode ser "Disponível," "Emprestado," "Atrasado" ou "Perdido."
 
+<<<<<<< HEAD
 Métodos:
 
     - Livro::Livro: Construtor da classe Livro. Ele inicializa todos os atributos do livro com os valores fornecidos.
@@ -133,3 +134,5 @@ Instruções de uso:
     - Executar o programa e realizar o login.
     - Selecionar o método que gostaria de acessar.
     - Seguir as instruções que forem dadas durante o uso.
+=======
+>>>>>>> 4564e65 (atualizado)
