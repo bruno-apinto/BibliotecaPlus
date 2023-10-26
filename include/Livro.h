@@ -26,7 +26,7 @@ public:
      * @param numero 
      */
     Livro::Livro (std::string nome, std::string autor, std::string ano, 
-        std::string edicao, std::string secao, std::string bibliotecas,
+        std::string edicao, std::string secao,
         std::string editora, std::string numero);
 
     /**

@@ -41,6 +41,13 @@ public:
         std::vector<std::string> historicoEmprestimos;
     };
     */
+   private:
+    std::string nome_;
+    std::string telefone_;
+    std::string login_;
+    std::string senha_;
+    std::string email_;
+    std::string matricula_; 
 
     Pessoa usuario;
     Situacao situacao;

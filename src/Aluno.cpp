@@ -3,23 +3,21 @@
 #include <iostream>
 #include <string.h>
 
-Alunos::Alunos(std::string nome, std::string telefone, std::string login,
+Aluno::Aluno(std::string nome, std::string telefone, std::string login,
                  std::string senha, std::string email, std::string matricula)
 {
-    usuario.nome = nome;
-    usuario.telefone = telefone;
-    usuario.login = login;
-    usuario.senha = senha;
-    usuario.email = email;
-    usuario.matricula = matricula;
-
+    nome_ = nome;
+    telefone_ = telefone;
+    login_ = login;
+    senha_ = senha;
+    email_ = email;
+    matricula_ =  matricula;
     situacao.pendencia = false;
     situacao.multa = 0;
     situacao.livrosEmprestados.clear();
-    situacao.historicoEmprestimos.clear();
 }
 
-void Alunos::consultarDados() {
+void Aluno::consultarDados() {
     std::cout << "Nome: " << usuario.nome << std::endl;
     std::cout << "Telefone: " << usuario.telefone << std::endl;
     std::cout << "Login: " << usuario.login << std::endl;
@@ -28,4 +26,6 @@ void Alunos::consultarDados() {
 }
 
 
-void consultarSituacao()
+void consultarSituacao() {
+    
+}
