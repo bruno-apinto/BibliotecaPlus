@@ -45,8 +45,7 @@ Métodos:
     - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
     - void Alunos::consultarDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
     - void Alunos::consultarSituacao(): Método que consulta a situação atual do aluno em relação aos empréstimos de livros, verificando se há pendências, o valor da multa e a lista de livros emprestados
-    - std::vector<Livro> Alunos::procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite ao aluno procurar livros no acervo da biblioteca com base em parâmetros como autor, título, editora, etc.
-    - calcularMulta(dataDevolucao, dataAtual): Método que recebe as datas de devolução e data atual como entrada e calcula a multa com base na diferença entre essas datas. Esse método é fundamental para calcular multas devidas pelo aluno em caso de atraso na devolução. 
+    - std::vector<Livro> Alunos::procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite ao aluno procurar livros no acervo da biblioteca com base em parâmetros como autor, título, editora, etc. 
 
 Classe AcervoLivros: 
 
@@ -63,6 +62,10 @@ Métodos:
     - receberLivro(aluno, livro): Permite registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
     - setSituacao(novaSituacao): Define a situação do empréstimo de um livro. Isso pode ser usado para atualizar a situação de um livro para "disponível", "atrasado" ou "perdido".
 
+Classe AcervoAlunos:
+
+    - 
+    
 Classe Livros:
 
 Atributos:
