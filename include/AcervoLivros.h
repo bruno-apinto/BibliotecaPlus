@@ -7,15 +7,6 @@
 #include <string>
 #include <vector>
 
-struct Pessoa {
-        std::string nome;
-        std::string telefone;
-        std::string login;
-        std::string senha;
-        std::string email;
-        std::string matricula;
-    };
-
 class AcervoLivros {
 public:
     AcervoLivros(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
@@ -35,14 +26,6 @@ public:
     void setSituacao(SituacaoEmprestimo novaSituacao);
 
 private:
-    struct Pessoa { // struct dos dados do usuário
-        std::string nome;
-        std::string telefone;
-        std::string login;
-        std::string senha;
-        std::string email;
-        std::string matricula;
-    };
 
     std::vector<Livro> AcervoLivros; // lista com os livros do AcervoLivros
     std::vector<Alunos> cadastros; // lista com os alunos cadastrados
