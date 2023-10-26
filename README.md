@@ -58,7 +58,6 @@ Classe Bibliotecário:
 
 Atributos: 
 
-    - acervo: Uma lista de objetos do tipo Livro que representa o acervo de livros da biblioteca. O bibliotecário pode adicionar, remover e editar livros no acervo.
     - cadastros: Uma lista de objetos do tipo Alunos que representa os registros de alunos. O bibliotecário pode adicionar, remover e editar cadastros de alunos.
 
 Métodos: 

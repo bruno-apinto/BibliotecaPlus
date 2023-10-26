@@ -75,23 +75,21 @@ void acessoAluno (Alunos& aluno, int& input){
             break;
         }
     }
-=======
+
 bool validarSenha (std::string& login, std::string& senha){
-=======
+
 key validarSenha (std::string& login, std::string& senha, Pessoa& usuario){
 >>>>>>> 3f71ac4 (Primeira versão do main.cpp)
     //conferir se o usuario e as senhas são validos
     key chave;
 
-<<<<<<< HEAD
     return true;
->>>>>>> d72811a (Main p.1 e Mudar pessoas de boiblioteca)
-=======
+
     //procurar usuario
     //se existir bibliotecario == 1, aluno == 2, ngm == 0
 
     return chave;
->>>>>>> 3f71ac4 (Primeira versão do main.cpp)
+
 }
 
 int main(){

@@ -1,5 +1,5 @@
-#ifndef BIBLIOTECARIO_H
-#define BIBLIOTECARIO_H
+#ifndef ACERVO_H
+#define ACERVO_H
 
 #include "Aluno.h"
 #include "Livro.h"
@@ -16,9 +16,9 @@ struct Pessoa {
         std::string matricula;
     };
 
-class Bibliotecario {
+class Acervo {
 public:
-    Bibliotecario(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
+    Acervo(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
 
     std::vector<Livro> procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
     void adicionarLivro(const Livro& livro); // função que permite adicionar livros ao acervo
