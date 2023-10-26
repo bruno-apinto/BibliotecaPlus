@@ -83,7 +83,7 @@ public:
      * 
      * @return std::string numero_
      */
-    std::string getNumero() const;
+    std::string getID() const;
 
     /**
      * @brief Get the Situacao object
