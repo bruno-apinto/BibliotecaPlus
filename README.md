@@ -8,9 +8,11 @@ As bibliotecas da universidade precisam de um sistema que controle o estoque de 
 Requisitos de Projeto: 
 
 Sistema para Bibliotecários: 
+
     O sistema precisa ser capaz de procurar títulos de livro no estoque, editar o acervo, editar cadastros de alunos (adicionar, remover e alterar dados), registrar empréstimos e devoluções. 
 
 Sistema para Alunos: 
+
     A implementação terá que realizar a busca de títulos no acervo, consultar a situação de empréstimos do usuário (calcular multa e acessar o histórico de livros emprestados) e acessar seus dados. 
 
 Levantamento de requisitos: 
@@ -25,10 +27,12 @@ Requisitos funcionais:
     - Consultar dados de usuários. 
 
 Requisitos não funcionais: 
+
     - Interface intuitiva. 
     - Código bem documentado e organizado. 
 
 Modelagem básica do sistema: 
+
     Terão quatro classes principais: Alunos, Bibliotecário, Livros e Notificação. 
 
 Classe Alunos: 
@@ -36,7 +40,6 @@ Classe Alunos:
 Atributos: 
     - Pessoa usuario: Estrutura que armazena informações pessoais do aluno, incluindo nome, telefone, login, senha, email e matrícula.
     - Situacao situacao: Estrutura que registra a situação do aluno em relação a empréstimos de livros, incluindo se há pendências, o valor da multa a pagar e a lista de títulos de livros atualmente emprestados.
-    - dataDeDevolucao: Atributo que armazena a data prevista para devolução dos livros emprestados.
 
 Métodos: 
     - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
@@ -77,14 +80,14 @@ Atributos:
 
     - nome_ (std::string): Armazena o nome do livro.
     - autor_ (std::string): Armazena o nome do autor do livro.
-    - ano_ (std::string): Armazena o ano de publicação do livro.
-    - edicao_ (std::string): Armazena a edição do livro.
-    - secao_ (std::string): Armazena a seção onde o livro se encontra na biblioteca.
+    - ano_ (std::int): Armazena o ano de publicação do livro.
+    - edicao_ (std::int): Armazena a edição do livro.
     - biblioteca_ (std::string): Armazena informações sobre a biblioteca.
     - editora_ (std::string): Armazena o nome da editora do livro.
-    - numero_ (std::string): Armazena um número de identificação único para o livro.
+    - ID_ (std::int): Armazena um número de identificação único para o livro.
     - dataEmprestimo_ (int): Armazena a data em que o livro foi emprestado, se aplicável.
     - situacao_ (SituacaoEmprestimo): Um enum que indica a situação do empréstimo do livro, que pode ser "Disponível," "Emprestado," "Atrasado" ou "Perdido."
+    - dataDevolucao: Atributo que armazena a data prevista para devolução dos livros emprestados.
 
 Métodos:
 
@@ -93,10 +96,10 @@ Métodos:
     - getAutor() const: Método que retorna o nome do autor do livro.
     - getAno() const: Método que retorna o ano de publicação do livro.
     - getEdicao() const: Método que retorna a edição do livro.
-    - getSecao() const: Método que retorna a seção onde o livro está localizado na biblioteca.
     - getBiblioteca() const: Método que retorna informações sobre a biblioteca relacionadas ao livro.
-    - getEditora() const: Método que retorna o nome da editora do livro.- getNumero() const: Método que retorna o número de identificação único do livro.
+    - getEditora() const: Método que retorna o nome da editora do livro.
     - getSituacao() const: Método que retorna a situação do empréstimo do livro (Disponível, Emprestado, Atrasado ou Perdido).
+    - getID() const: Método que retorna o número de identificação único do livro. 
     - comparar(Livro& livro): Método que compara dois livros para verificar se são iguais com base em vários atributos, como nome, autor, ano, edição, etc. Retorna true se forem iguais e false se forem diferentes.
     - procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite a busca de livros com base em um parâmetro específico, como "Autor," "Nome," "Editora," etc. Ele retorna uma lista de livros que correspondem ao critério de busca.
 
@@ -146,3 +149,12 @@ Estrutura do projeto:
 - bin: É o diretório onde os arquivos executáveis são gerados após a compilação do código-fonte. Aqui, você encontrará o executável principal do sistema, que pode ser usado para iniciar a aplicação.
 
 - data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
+
+Principais dificuldades:
+- Integração das classes: Garantir que as classes Alunos, Bibliotecario, Livro e Notificacao se integrassem de maneira eficaz, com troca de informações e funcionalidades entre elas.
+
+- Cálculo de multas e gestão de datas: Implementar um sistema eficiente de cálculo de multas com base em datas e lidar com a gestão de datas para empréstimos e devoluções de livros.
+
+- Envio de notificações por email: Configurar e integrar a funcionalidade de envio de notificações por email, garantindo que as notificações fossem enviadas aos alunos com pendências de forma correta.
+
+-Testes e validação: Desenvolver testes adequados e garantir que o sistema funcionasse conforme o esperado, incluindo a verificação de casos de uso, tratamento de erros e validação de entradas.
