@@ -32,7 +32,7 @@ Requisitos não funcionais:
     - Código bem documentado e organizado. 
 
 Modelagem básica do sistema: 
-    Terão quatro classes principais: Alunos, Bibliotecário, Livros e Notificação. 
+    Terão seis classes principais: Alunos, AcervoLivro, AcervoAlunos, situacao, Livros e Notificação. 
 
 Classe Aluno: 
 
@@ -48,29 +48,19 @@ Métodos:
     - std::vector<Livro> Alunos::procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite ao aluno procurar livros no acervo da biblioteca com base em parâmetros como autor, título, editora, etc.
     - calcularMulta(dataDevolucao, dataAtual): Método que recebe as datas de devolução e data atual como entrada e calcula a multa com base na diferença entre essas datas. Esse método é fundamental para calcular multas devidas pelo aluno em caso de atraso na devolução. 
 
-Estrutura Situacao:
-
-A estrutura Situacao é uma estrutura interna que contém informações sobre a situação do aluno em relação aos empréstimos de livros:
-    - bool pendencia: Um atributo booleano que indica se o aluno possui alguma pendência, como atrasos na devolução de livros.
-    - float multa: Um atributo que armazena o valor da multa que o aluno deve pagar, caso haja atrasos na devolução.-std::vector<std::string> livrosEmprestados: Uma lista de strings que contém os títulos dos livros atualmente emprestados para o aluno.
-
-Classe Bibliotecário: 
+Classe AcervoLivros: 
 
 Atributos: 
 
-    - cadastros: Uma lista de objetos do tipo Alunos que representa os registros de alunos. O bibliotecário pode adicionar, remover e editar cadastros de alunos.
 
 Métodos: 
 
-    - procurarLivros(parametro, item, livrosEncontrados): Permite ao bibliotecário procurar livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
-    - adicionarLivro(livro): Permite ao bibliotecário adicionar um livro ao acervo da biblioteca.
-    - removerLivro(titulo): Permite ao bibliotecário remover um livro do acervo com base no título do livro.
-    - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite ao bibliotecário editar as informações de um livro no acervo com base no título. O bibliotecário pode atualizar o título, autor, editora e detalhes do livro.
-    - adicionarPessoa(aluno): Permite ao bibliotecário adicionar um novo cadastro de aluno ao sistema.
-    - removerPessoa(matricula): Permite ao bibliotecário remover o cadastro de um aluno com base em sua matrícula.
-    - editarPessoa(matricula, novoNome, novaSenha, novoEmail): Permite ao bibliotecário editar as informações de um cadastro de aluno com base em sua matrícula. O bibliotecário pode atualizar o nome, senha e email do aluno.
-    - emprestarLivro(aluno, livro): Permite ao bibliotecário registrar o empréstimo de um livro a um aluno. Isso atualiza a situação do livro para "emprestado".
-    - receberLivro(aluno, livro): Permite ao bibliotecário registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
+    - procurarLivros(parametro, item, livrosEncontrados): busca de livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
+    - adicionarLivro(livro): Permite adicionar um livro ao acervo da biblioteca.
+    - removerLivro(titulo): Permite remover um livro do acervo com base no título do livro.
+    - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite  editar as informações de um livro no acervo com base no título. Atualiza o título, autor, editora e detalhes do livro.
+    - emprestarLivro(aluno, livro): Permite registrar o empréstimo de um livro a um aluno. Isso atualiza a situação do livro para "emprestado".
+    - receberLivro(aluno, livro): Permite registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
     - setSituacao(novaSituacao): Define a situação do empréstimo de um livro. Isso pode ser usado para atualizar a situação de um livro para "disponível", "atrasado" ou "perdido".
 
 Classe Livros:
@@ -137,7 +127,7 @@ Instruções de uso:
     - Seguir as instruções que forem dadas durante o uso.
 
 Estrutura do projeto:
-- src: Este diretório contém o código-fonte do sistema. Aqui você encontrará os arquivos das classes Alunos, Bibliotecario, Livro, Notificacao, e outros componentes relacionados ao funcionamento do sistema.
+- src: Este diretório contém o código-fonte do sistema. Aqui você encontrará os arquivos das classes Alunos, Acervo, Livro, Notificacao, e outros componentes relacionados ao funcionamento do sistema.
 
 - include: Neste diretório, estão localizados os arquivos de cabeçalho (headers) que declaram as classes e métodos utilizados no código-fonte. É onde você encontrará os arquivos .h que descrevem as interfaces das classes.
 
@@ -150,7 +140,7 @@ Estrutura do projeto:
 - data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
 
 Principais dificuldades:
-- Integração das classes: Garantir que as classes Alunos, Bibliotecario, Livro e Notificacao se integrassem de maneira eficaz, com troca de informações e funcionalidades entre elas.
+- Integração das classes: Garantir que as classes Alunos, Acervo, Livro e Notificacao se integrassem de maneira eficaz, com troca de informações e funcionalidades entre elas.
 
 - Cálculo de multas e gestão de datas: Implementar um sistema eficiente de cálculo de multas com base em datas e lidar com a gestão de datas para empréstimos e devoluções de livros.
 
