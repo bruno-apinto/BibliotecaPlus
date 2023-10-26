@@ -32,16 +32,17 @@ Requisitos não funcionais:
     - Código bem documentado e organizado. 
 
 Modelagem básica do sistema: 
-
     Terão quatro classes principais: Alunos, Bibliotecário, Livros e Notificação. 
 
 Classe Alunos: 
 
 Atributos: 
+
     - Pessoa usuario: Estrutura que armazena informações pessoais do aluno, incluindo nome, telefone, login, senha, email e matrícula.
     - Situacao situacao: Estrutura que registra a situação do aluno em relação a empréstimos de livros, incluindo se há pendências, o valor da multa a pagar e a lista de títulos de livros atualmente emprestados.
 
 Métodos: 
+
     - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
     - void Alunos::consultarDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
     - void Alunos::consultarSituacao(): Método que consulta a situação atual do aluno em relação aos empréstimos de livros, verificando se há pendências, o valor da multa e a lista de livros emprestados
@@ -57,6 +58,7 @@ A estrutura Situacao é uma estrutura interna que contém informações sobre a 
 Classe Bibliotecário: 
 
 Atributos: 
+
     - Pessoa: Uma estrutura que armazena informações pessoais do bibliotecário, como nome, telefone, login, senha, email e matrícula. Esses atributos identificam o bibliotecário no sistema.
     - acervo: Uma lista de objetos do tipo Livro que representa o acervo de livros da biblioteca. O bibliotecário pode adicionar, remover e editar livros no acervo.
     - cadastros: Uma lista de objetos do tipo Alunos que representa os registros de alunos. O bibliotecário pode adicionar, remover e editar cadastros de alunos.
