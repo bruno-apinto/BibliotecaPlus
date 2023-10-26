@@ -2,6 +2,7 @@
 #define BIBLIOTECARIO_H
 
 #include "Aluno.h"
+#include "Livro.h"
 #include "Aluno.cpp"
 #include <string>
 #include <vector>
@@ -19,9 +20,7 @@ class Bibliotecario {
 public:
     Bibliotecario(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
 
-    std::vector<Livro> ProcurarLivrosPorTitulo(Alunos& aluno, std::string titulo); // lista que retorna a busca de livros por título
-    std::vector<Livro> ProcurarLivrosPorAutor(Alunos& aluno, std::string autor); // lista que retorna a busca de livros por autor
-    std::vector<Livro> ProcurarLivrosPorEditora(Alunos& aluno, std::string editora); // lista que retorna a busca de livros por editora
+    std::vector<Livro> procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
     void EditarAcervoAdicionarLivro(const Livro& livro); // função que permite adicionar livros ao acervo
     void EditarAcervoRemoverLivro(const std::string& titulo); // função que permite remover livros do acervo
     void EditarAcervoEditarLivro(const std::string& titulo, const std::string& novoTitulo, const std::string& novoAutor, const std::string& novaEditora, const std::string& novosDetalhes); // função que permite editar as informações de livros no acervo

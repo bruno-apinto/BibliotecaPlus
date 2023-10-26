@@ -3,7 +3,7 @@
 
 #include <string>
 
-enum class SituacaoEmprestimo {
+enum class situacaoEmprestimo {
     Disponivel,
     Emprestado,
     Atrasado,
@@ -21,12 +21,12 @@ public:
      * @param ano 
      * @param edicao 
      * @param secao 
-     * @param biblioteca 
+     * @param bibliotecas 
      * @param editora 
      * @param numero 
      */
     Livro::Livro (std::string nome, std::string autor, std::string ano, 
-        std::string edicao, std::string secao, std::string biblioteca,
+        std::string edicao, std::string secao, std::string bibliotecas,
         std::string editora, std::string numero);
 
     /**

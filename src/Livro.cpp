@@ -4,6 +4,12 @@
 #include <vector>
 
 /**
+ * @brief Construtor de Livro(vazio)
+ * 
+ */
+Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
+
+/**
  * @brief Construct a new Livro:: Livro object
  * 
  * @param nome 
@@ -19,7 +25,7 @@ Livro::Livro(std::string nome, std::string autor, std::string ano,
     std::string edicao, std::string secao, std::string biblioteca, 
     std::string editora, std::string numero) : nome_(nome), autor_(autor), ano_(ano),
         edicao_(edicao), secao_(secao), biblioteca_(biblioteca),
-        editora_(editora), numero_(numero), situacao_(SituacaoEmprestimo::Disponivel) {}
+        editora_(editora), numero_(numero), situacao_(situacaoEmprestimo::Disponivel) {}
 
 std::string Livro::getNome() const {
     return nome_;

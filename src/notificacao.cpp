@@ -1,14 +1,39 @@
+#include <mailio/message.hpp> 
+#include <mailio/smtp.hpp> 
+#include <mailio.cpp>
 #include <iostream>
-#include <string>
-#include <vector>
-#include <mailio/mailboxes.hpp>
-#include <mailio/message.hpp>
-mailio::message msg;
+#include <ctime>
+#include <chrono>
 
-msg.from(mailio::mail_address("remetente@example.com", "Nome do Remetente"));
-msg.add_recipient(mailio::mail_address("destinatario@example.com", "Nome do Destinatario"))6154;
-msg.subject("Assunto do E-mail");
-msg.content("Conteúdo da mensagem de e-mail.");
-mailio::smtp conn("smtp.example.com", 587); // Substitua com as configurações do seu servidor SMTP
-conn.authenticate("seu_email@example.com", "sua_senha", mailio::smtps::auth_method_t::START_TLS);
-conn.submit(msg);
+int main() {
+    // Fecha de inicio
+    std::chrono::system_clock::time_point startDate = std::chrono::system_clock::now();
+
+    // Calcula la fecha que estará una semana después
+    std::chrono::system_clock::time_point oneWeekLater = startDate + std::chrono::hours(24 * 7);
+
+    // Bucle principal
+    while (true) {
+        // Obtiene la hora actual
+        std::chrono::system_clock::time_point currentTime = std::chrono::system_clock::now();
+
+        if (currentTime >= oneWeekLater) {
+            std::cout << "Ha pasado una semana desde la fecha de inicio." << std::endl;
+            break;
+        }
+    }
+    mailio::message msg; 
+
+    msg.from(mailio::mail_address("naoresponda.biblioteca.plus@gmail.com", "Biblioteca Plus")); 
+
+    msg.add_recipient(mailio::mail_address("destinatario@gmail.com", "Nome do Destinatário")); 
+
+    msg.subject("Devolução de livro - Não responder"); 
+
+    msg.content("Olá! Você possui uma pendência com a biblioteca. Para resolvê-la, devolva o livro emprestado e pague a multa. A Biblioteca Plus agradece!"); 
+    mailio::smtps conn("smtp.gmail.com", 587); // Use o servidor SMTP do Gmail e a porta 587 
+    conn.authenticate("seuemail@gmail.com", "suaSenha", mailio::smtps::auth_method_t::START_TLS); // Autenticação com STARTTLS 
+    conn.submit(msg); 
+
+    return 0;
+}
