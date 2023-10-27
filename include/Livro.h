@@ -13,22 +13,10 @@ enum class situacaoEmprestimo {
 class Livro {
 public:
 
-    /**
-     * @brief Construct a new Livro:: Livro object
-     * 
-     * @param nome 
-     * @param autor 
-     * @param ano 
-     * @param edicao 
-     * @param secao 
-     * @param bibliotecas 
-     * @param editora 
-     * @param numero 
-     */
     Livro::Livro (std::string nome, std::string autor, std::string ano, 
-        std::string edicao, std::string secao,
-        std::string editora, std::string numero);
+        std::string edicao, std::string editora, std::string ID);
 
+        std::string dataEmprestimo;
     /**
      * @brief Get the Nome object
      * 
@@ -56,13 +44,6 @@ public:
      * @return std::string edicao_
      */
     std::string getEdicao() const;
-    
-    /**
-     * @brief Get the Secao object
-     * 
-     * @return std::string secao_
-     */
-    std::string getSecao() const;
 
     /**
      * @brief Get the Biblioteca object
@@ -83,7 +64,7 @@ public:
      * 
      * @return std::string numero_
      */
-    std::string getNumero() const;
+    std::string getID() const;
 
     /**
      * @brief Get the Situacao object
@@ -119,11 +100,10 @@ private:
     std::string autor_;
     std::string ano_;
     std::string edicao_;
-    std::string secao_;
     std::string biblioteca_;
     std::string editora_;
-    std::string numero_;
-    int dataEmprestimo_;
+    std::string ID_;
+    string dataEmprestimo_;
     SituacaoEmprestimo situacao_;
 };
 
