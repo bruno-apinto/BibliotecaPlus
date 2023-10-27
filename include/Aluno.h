@@ -1,29 +1,16 @@
-#ifndef ALUNO_H
-#define ALUNO_H
-#include "Livro.h"
-#include "src/Livro.cpp"
 
+#include "Livro.h"
+// #include "src/Livro.cpp"
+#include "Situacao.h"
 #include <string>
 #include <vector>
 
-struct Pessoa {
-        std::string nome;
-        std::string telefone;
-        std::string login;
-        std::string senha;
-        std::string email;
-        std::string matricula;
-    };
-
-
-class Alunos {
-public:
-    Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
+class Aluno{
+    public:
+    Aluno(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
     
-    Alunos::procurarAlunos(); // função que encontra o aluno dentro do arquivo
-    void consultarDados(); // função que mostra os dados do aluno
-    void consultarSituacao(); // função que mostra a situação (se há empréstimos, pendências...)
-
+    // Aluno::procurarAlunos(); // função que encontra o aluno dentro do arquivo
+    void consultarMeusDados();
     /*
     struct Pessoa {
         std::string nome;
@@ -48,9 +35,7 @@ public:
     std::string senha_;
     std::string email_;
     std::string matricula_; 
-
-    Pessoa usuario;
-    Situacao situacao;
+    Situacao situacao_;
 };
 
 /**
@@ -61,12 +46,3 @@ public:
      * historicoEmprestimos (vector)
      * 
      */
-
-    struct Situacao {
-        bool pendencia; // atributo booleano que indica se existe pendência ou não
-        int multa; // valor da multa a ser paga
-        std::vector<std::string> livrosEmprestados; // lista com os livros atualmente emprestados para o aluno
-        std::vector<std::string> historicoEmprestimos; // lista com os livros já emprestados ao usuário
-    };
-    
-#endif ALUNO_H
