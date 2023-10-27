@@ -28,7 +28,9 @@ void Acervo::removerPessoa(const std::string& matricula) {
     // Implemente a lógica para remover um aluno dos cadastros.
 }
 
-void Acervo::editarPessoa(const std::string& matricula, const std::string& novoNome, const std.
+void Acervo::editarPessoa(Livro& livro, string parametro) {
+
+}
 
 
 void Livro::setStatus(Status novaStatus) {
