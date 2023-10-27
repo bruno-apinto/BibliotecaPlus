@@ -149,4 +149,4 @@ Principais dificuldades:
 
 - Envio de notificações por email: Configurar e integrar a funcionalidade de envio de notificações por email, garantindo que as notificações fossem enviadas aos alunos com pendências de forma correta.
 
--Testes e validação: Desenvolver testes adequados e garantir que o sistema funcionasse conforme o esperado, incluindo a verificação de casos de uso, tratamento de erros e validação de entradas.
+- Testes e validação: Desenvolver testes adequados e garantir que o sistema funcionasse conforme o esperado, incluindo a verificação de casos de uso, tratamento de erros e validação de entradas.
