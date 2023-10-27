@@ -1,23 +1,22 @@
-#include "include/Aluno.h"
-#include "include/Livro.h"
+#include "Aluno.h"
+#include "Livro.h"
+#include "Livro.h"
 #include <iostream>
-#include <string.h>
 
-Aluno::Aluno(std::string nome, std::string telefone, std::string login,
-                 std::string senha, std::string email, std::string matricula)
-{
-    nome_ = nome;
-    telefone_ = telefone;
-    login_ = login;
-    senha_ = senha;
-    email_ = email;
-    matricula_ =  matricula;
+Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula) {
+    usuario.nome = nome;
+    usuario.telefone = telefone;
+    usuario.login = login;
+    usuario.senha = senha;
+    usuario.email = email;
+    usuario.matricula = matricula;
+
     situacao.pendencia = false;
     situacao.multa = 0;
-    situacao.livrosEmprestados.clear();
+    
 }
 
-void Aluno::consultarDados() {
+void Alunos::ConsultarDados() {
     std::cout << "Nome: " << usuario.nome << std::endl;
     std::cout << "Telefone: " << usuario.telefone << std::endl;
     std::cout << "Login: " << usuario.login << std::endl;
@@ -25,7 +24,10 @@ void Aluno::consultarDados() {
     std::cout << "Matrícula: " << usuario.matricula << std::endl;
 }
 
+std::vector<Livro> livrosEncontrados = Livro::procurarLivros(parametro, item, listaDeLivros);
 
-void consultarSituacao() {
-    
+void Alunos::ConsultarSituacao() {
+    std::cout << "Pendência: " << (situacao.pendencia ? "Sim" : "Não") << std::endl;
+    std::cout << "Multa: " << situacao.multa << " reais" << std::endl;
+    // Mostrar informações sobre livros emprestados e histórico de empréstimos. Histórico, livros emprestados
 }
