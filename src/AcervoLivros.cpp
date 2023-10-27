@@ -31,6 +31,6 @@ void Acervo::removerPessoa(const std::string& matricula) {
 void Acervo::editarPessoa(const std::string& matricula, const std::string& novoNome, const std.
 
 
-void Livro::setSituacao(SituacaoEmprestimo novaSituacao) {
-    situacao_ = novaSituacao;
+void Livro::setStatus(Status novaStatus) {
+    status_ = novoStatus;
 }

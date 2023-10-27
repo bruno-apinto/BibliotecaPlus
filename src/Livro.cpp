@@ -16,16 +16,12 @@ Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
  * @param autor 
  * @param ano 
  * @param edicao 
- * @param secao 
- * @param biblioteca 
  * @param editora 
- * @param numero 
+ * @param ID
  */
 Livro::Livro(std::string nome, std::string autor, std::string ano,
-    std::string edicao, std::string secao, std::string biblioteca, 
-    std::string editora, std::string numero) : nome_(nome), autor_(autor), ano_(ano),
-        edicao_(edicao), secao_(secao), biblioteca_(biblioteca),
-        editora_(editora), numero_(numero), situacao_(situacaoEmprestimo::Disponivel) {}
+    std::string edicao, std::string editora, std::string ID) : nome_(nome), autor_(autor), ano_(ano),
+        edicao_(edicao), editora_(editora), ID_(ID), status_(status::Disponivel) {}
 
 std::string Livro::getNome() const {
     return nome_;
@@ -43,24 +39,16 @@ std::string Livro::getEdicao() const {
     return edicao_;
 }
 
-std::string Livro::getSecao() const {
-    return secao_;
-}
-
-std::string Livro::getBiblioteca() const {
-    return biblioteca_;
-}
-
 std::string Livro::getEditora() const {
     return editora_;
 }
 
-std::string Livro::getNumero() const {
-    return numero_;
+std::string Livro::getID() const {
+    return ID_;
 }
 
-SituacaoEmprestimo Livro::getSituacao() const {
-    return situacao_;
+Status Livro::getStatus() const {
+    return status_;
 }
 
 
@@ -72,9 +60,8 @@ bool Livro::comparar (Livro& livro){
     indice *= livro.getNome().compare(nome_);
     indice *= livro.getAutor().compare(autor_);
     indice *= livro.getEdicao().compare(edicao_);
-    indice *= livro.getSecao().compare(secao_);
     indice *= livro.getEditora().compare(editora_);
-    indice *= livro.getNumero().compare(numero_);
+    indice *= livro.getID().compare(ID_);
 
     return indice;
 }
@@ -152,26 +139,12 @@ std::vector<Livro> Livro::procurarLivros
 
     }
 
-    else if (!(parametro.compare("Numero"))){
+    else if (!(parametro.compare("ID"))){
 
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
             if (it->getNumero().compare(item)){
-                auxiliar.push_back(*it);
-            }
-        }
-
-        return auxiliar;
-
-    }
-
-    else if (!(parametro.compare("Secao"))){
-
-        std::vector<Livro> auxiliar;
-        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
-        
-            if (it->getSecao().compare(item)){
                 auxiliar.push_back(*it);
             }
         }

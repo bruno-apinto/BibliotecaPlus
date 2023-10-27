@@ -3,7 +3,7 @@
 
 #include <string>
 
-enum class situacaoEmprestimo {
+enum class status {
     Disponivel,
     Emprestado,
     Atrasado,
@@ -46,13 +46,6 @@ public:
     std::string getEdicao() const;
 
     /**
-     * @brief Get the Biblioteca object
-     * 
-     * @return std::string biblioteca_
-     */
-    std::string getBiblioteca() const;
-
-    /**
      * @brief Get the Editora object
      * 
      * @return std::string editora_
@@ -71,7 +64,7 @@ public:
      * 
      * @return SituacaoEmprestimo 
      */
-    SituacaoEmprestimo getSituacao() const;
+    status getStatus() const;
 
     
     /**
@@ -100,11 +93,10 @@ private:
     std::string autor_;
     std::string ano_;
     std::string edicao_;
-    std::string biblioteca_;
     std::string editora_;
     std::string ID_;
     string dataEmprestimo_;
-    SituacaoEmprestimo situacao_;
+    Status status_;
 };
 
 #endif
