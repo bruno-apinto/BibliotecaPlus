@@ -10,13 +10,19 @@ class Aluno{
 
     //construtor de Aluno
     Aluno (std::string nome, std::string telefone, std::string login,
-     std::string senha, std::string email, std::string matricula);
+        std::string senha, std::string email, std::string matricula);
     
     // função que encontra o aluno dentro do arquivo
     std::vector<Aluno> procurarAlunos
             (std::string parametro, std::string item, std::vector<Livro> alunosEncontrados); 
             
     void consultarMeusDados();
+
+    void getNome();
+    void getTelefone();
+    void getLogin();
+    void getEmail();
+    void getMatricula();
     
    private:
     std::string nome_;
