@@ -42,9 +42,9 @@ void Aluno::consultarMeusDados() {
 }
 
 std::vector<Aluno> Aluno::procurarAlunos 
-        (std::string parametro, std::string item, std::vector<Livro> alunosEncontrados) 
+        (std::string categoria, std::string item, std::vector<Livro> alunosEncontrados) 
 {
-    if (!(parametro.compare("Nome"))){
+    if (!(categoria.compare("Nome"))){
 
         std::vector<Aluno> auxiliar;
         for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
@@ -57,7 +57,7 @@ std::vector<Aluno> Aluno::procurarAlunos
         return auxiliar;
     }
 
-    else if (!(parametro.compare("Telefone"))){
+    else if (!(categoria.compare("Telefone"))){
 
         std::vector<Aluno> auxiliar;
         for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
@@ -71,7 +71,7 @@ std::vector<Aluno> Aluno::procurarAlunos
 
     }
 
-    else if (!(parametro.compare("Login"))){
+    else if (!(categoria.compare("Login"))){
 
         std::vector<Aluno> auxiliar;
         for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
@@ -85,7 +85,7 @@ std::vector<Aluno> Aluno::procurarAlunos
 
     }
 
-    else if (!(parametro.compare("Email"))){
+    else if (!(categoria.compare("Email"))){
 
         std::vector<Aluno> auxiliar;
         for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
@@ -99,7 +99,7 @@ std::vector<Aluno> Aluno::procurarAlunos
 
     }
 
-    else if (!(parametro.compare("Matricula"))){
+    else if (!(categoria.compare("Matricula"))){
 
         std::vector<Aluno> auxiliar;
         for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){

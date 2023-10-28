@@ -8,20 +8,64 @@
 class Aluno{
     public:
 
-    //construtor de Aluno
+    /**
+     * @brief Construtor de Aluno
+     * 
+     * @param nome 
+     * @param telefone 
+     * @param login 
+     * @param senha 
+     * @param email 
+     * @param matricula 
+     */
     Aluno (std::string nome, std::string telefone, std::string login,
         std::string senha, std::string email, std::string matricula);
     
-    // função que encontra o aluno dentro do arquivo
+    /**
+     * @brief Funcao retorna um alista de alunos procurados
+     * 
+     * @param categoria 
+     * @param item 
+     * @param alunosEncontrados 
+     * @return std::vector<Aluno> 
+     */
     std::vector<Aluno> procurarAlunos
-            (std::string parametro, std::string item, std::vector<Livro> alunosEncontrados); 
+            (std::string categoria, std::string item, std::vector<Livro> alunosEncontrados); 
             
+    /**
+     * @brief Imprime os dados do cadastro na tela
+     * 
+     */
     void consultarMeusDados();
 
+    /**
+     * @brief Retorna o nome
+     * 
+     */
     void getNome();
+
+    /**
+     * @brief Retorna o telefone
+     * 
+     */
     void getTelefone();
+
+    /**
+     * @brief Retorna o login
+     * 
+     */
     void getLogin();
+
+    /**
+     * @brief Retorna o email
+     * 
+     */
     void getEmail();
+
+    /**
+     * @brief Retorna a matricula
+     * 
+     */
     void getMatricula();
     
    private:
