@@ -7,27 +7,12 @@
 
 class Aluno{
     public:
-    Aluno(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
+    Aluno (std::string nome, std::string telefone, std::string login,
+     std::string senha, std::string email, std::string matricula);
     
     // Aluno::procurarAlunos(); // função que encontra o aluno dentro do arquivo
     void consultarMeusDados();
-    /*
-    struct Pessoa {
-        std::string nome;
-        std::string telefone;
-        std::string login;
-        std::string senha;
-        std::string email;
-        std::string matricula;
-    };
-
-    struct Situacao {
-        bool pendencia;
-        int multa;
-        std::vector<std::string> livrosEmprestados;
-        std::vector<std::string> historicoEmprestimos;
-    };
-    */
+    
    private:
     std::string nome_;
     std::string telefone_;
@@ -38,11 +23,3 @@ class Aluno{
     Situacao situacao_;
 };
 
-/**
-     * @brief caracteristicas da situação do aluno:
-     * pendencia (true/false)
-     * multa (int)
-     * livrosEmprestados (vector)
-     * historicoEmprestimos (vector)
-     * 
-     */

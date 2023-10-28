@@ -7,16 +7,15 @@
 
 class Situacao {
 public:
-    // Situacao::Situacao();
-
-    bool getSituacao();
-    void setSituacao() const;
+    Situacao::Situacao();//construtor de situacao
+    bool getSituacao(); //retorna se a pendencia ou nao
+    void setSituacao() const; //altera se ha pendencia ou nao
     const std::vector<std::string>& getLivrosEmprestados() const;
     int calcularMulta(const std::chrono::system_clock::time_point& dataDevolucao);
 
 private:
     bool pendencia_; // atributo booleano que indica se existe pendência ou não
-    //int multa_; // valor da multa a ser paga
+    int multa_; // valor da multa a ser paga
     std::vector<std::string> livrosEmprestados_; // lista com os livros atualmente emprestados para o aluno
 };
 
