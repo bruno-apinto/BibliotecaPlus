@@ -1,0 +1,11 @@
+std::vector<Livro> livrosEncontrados = Livro::procurarLivros(parametro, item, listaDeLivros);
+void Alunos::ConsultarSituacao() {
+    std::cout << "Pendência: " << (situacao.pendencia ? "Sim" : "Não") << std::endl;
+    std::cout << "Multa: " << situacao.multa << " reais" << std::endl;
+    // Mostrar informações sobre livros emprestados e histórico de empréstimos. Histórico, livros emprestados
+}
+int main()
+{
+    Aluno teste("Mateus","123", "mateusssb31",
+                 "987", "teste@email", "matricula teste");
+}

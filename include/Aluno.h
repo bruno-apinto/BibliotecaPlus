@@ -7,10 +7,15 @@
 
 class Aluno{
     public:
+
+    //construtor de Aluno
     Aluno (std::string nome, std::string telefone, std::string login,
      std::string senha, std::string email, std::string matricula);
     
-    // Aluno::procurarAlunos(); // função que encontra o aluno dentro do arquivo
+    // função que encontra o aluno dentro do arquivo
+    std::vector<Aluno> procurarAlunos
+            (std::string parametro, std::string item, std::vector<Livro> alunosEncontrados); 
+            
     void consultarMeusDados();
     
    private:
