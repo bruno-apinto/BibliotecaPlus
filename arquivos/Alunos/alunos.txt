@@ -1,3 +1,5 @@
+{Nome $ login senha $ matricula email}
+
 Bruno Araujo Pinto $ brunoapinto kv8rms25 $ 2023038965 brunoapinto@gmail.com
 Beatriz Magalhaes Pissioni $ bpissioni bpissioni23 $ 2023034567 bpissioni@hotmail.com
 Samira Mansur Cunha Campos $ samimansur beterraba123 $2023039317 samimansur@ufmg.br 
