@@ -32,29 +32,44 @@ Requisitos não funcionais:
     - Código bem documentado e organizado. 
 
 Modelagem básica do sistema: 
-    Terão seis classes principais: Alunos, AcervoLivro, AcervoAlunos, situacao, Livros e Notificação. 
+    Terão seis classes principais: Aluno, AcervoLivros, AcervoAlunos, situacao, Livro e Notificacao. 
 
 Classe Aluno: 
 
 Atributos: 
 
-    - Situacao situacao: Estrutura que registra a situação do aluno em relação a empréstimos de livros, incluindo se há pendências, o valor da multa a pagar e a lista de títulos de livros atualmente emprestados.
+    - string nome
+    - string telefone
+    - string login
+    - string senha
+    - string email
+    - string matricula
 
-Métodos: 
+Métodos:
+
+    - void getMatricula();
+    - void getEmail();
+    - void getLogin();
+    - void getTelefone();
+    - void getNome();
+    - procurarAlunos
 
     - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
-    - void Alunos::consultarDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
-    - void Alunos::consultarSituacao(): Método que consulta a situação atual do aluno em relação aos empréstimos de livros, verificando se há pendências, o valor da multa e a lista de livros emprestados
-    - std::vector<Livro> Alunos::procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite ao aluno procurar livros no acervo da biblioteca com base em parâmetros como autor, título, editora, etc. 
+    
+    - consultarMeusDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
 
 Classe AcervoLivros: 
 
 Atributos: 
 
+    - login
+    - senha
+
 
 Métodos: 
 
     - procurarLivros(parametro, item, livrosEncontrados): busca de livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
+
     - adicionarLivro(livro): Permite adicionar um livro ao acervo da biblioteca.
     - removerLivro(titulo): Permite remover um livro do acervo com base no título do livro.
     - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite  editar as informações de um livro no acervo com base no título. Atualiza o título, autor, editora e detalhes do livro.
@@ -64,9 +79,17 @@ Métodos:
 
 Classe AcervoAlunos:
 
-    - 
+    Atributos:
+
+    - cadastros
+
+    Métodos:
+
+    - void editarAluno
+    - void removerAluno
+    - void adicionarAluno
     
-Classe Livros:
+Classe Livro:
 
 Atributos:
 
@@ -74,28 +97,25 @@ Atributos:
     - autor_ (std::string): Armazena o nome do autor do livro.
     - ano_ (std::int): Armazena o ano de publicação do livro.
     - edicao_ (std::int): Armazena a edição do livro.
-    - biblioteca_ (std::string): Armazena informações sobre a biblioteca.
     - editora_ (std::string): Armazena o nome da editora do livro.
     - ID_ (std::int): Armazena um número de identificação único para o livro.
     - dataEmprestimo_ (int): Armazena a data em que o livro foi emprestado, se aplicável.
-    - situacao_ (SituacaoEmprestimo): Um enum que indica a situação do empréstimo do livro, que pode ser "Disponível," "Emprestado," "Atrasado" ou "Perdido."
-    - dataDevolucao: Atributo que armazena a data prevista para devolução dos livros emprestados.
 
 Métodos:
 
     - Livro::Livro: Construtor da classe Livro. Ele inicializa todos os atributos do livro com os valores fornecidos.
+
     - getNome() const: Método que retorna o nome do livro.
     - getAutor() const: Método que retorna o nome do autor do livro.
     - getAno() const: Método que retorna o ano de publicação do livro.
     - getEdicao() const: Método que retorna a edição do livro.
-    - getBiblioteca() const: Método que retorna informações sobre a biblioteca relacionadas ao livro.
     - getEditora() const: Método que retorna o nome da editora do livro.
-    - getSituacao() const: Método que retorna a situação do empréstimo do livro (Disponível, Emprestado, Atrasado ou Perdido).
+    - getStatus() const: Método que retorna a situação do empréstimo do livro (Disponível, Emprestado, Atrasado ou Perdido).
     - getID() const: Método que retorna o número de identificação único do livro. 
     - comparar(Livro& livro): Método que compara dois livros para verificar se são iguais com base em vários atributos, como nome, autor, ano, edição, etc. Retorna true se forem iguais e false se forem diferentes.
     - procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite a busca de livros com base em um parâmetro específico, como "Autor," "Nome," "Editora," etc. Ele retorna uma lista de livros que correspondem ao critério de busca.
 
-Classe Notificação:
+Classe Notificacao:
 
 Atributos:
 
@@ -110,6 +130,21 @@ Métodos:
     - setConfiguracoesSMTP(servidor: string, porta: int, username: string, senha: string): Este método permite definir as configurações do servidor SMTP para uso na classe. Ele recebe o endereço do servidor, a porta, o nome de usuário e a senha para autenticação no servidor SMTP.
     - escolherDestinatarioComPendencia(alunos: vector<Alunos>): vector<Alunos>: Este método recebe uma lista de objetos Alunos como entrada e retorna uma lista contendo apenas os alunos que têm pendências na biblioteca. Isso é útil para selecionar os destinatários corretos antes de enviar notificações.
     - enviarNotificacoesPendentes(alunosComPendencia: vector<Alunos>, assunto: string, corpo: string): vector<string>: Este método recebe uma lista de alunos com pendências, um assunto e um corpo como entrada, e envia notificações para todos eles. Ele retorna uma lista de endereços de email para os quais as notificações foram enviadas com sucesso.
+
+Classe Situacao:
+
+Atributos:
+
+    - pendencia_
+    - multa_
+    - livrosEmprestados_
+
+Métodos:
+
+    - int calcularMulta
+    - getSituacao
+    - setSituacao
+    - getLivrosEmprestados
 
 Instruções de instalação:
 
