@@ -3,24 +3,28 @@
 #include <iostream>
 #include "include/Situacao.h"
 
-void Aluno::getEmail(){
+std::string Aluno::getEmail(){
     return email_;
 }
 
-void Aluno::getLogin(){
+std::string Aluno::getLogin(){
     return login_;
 }
 
-void Aluno::getMatricula(){
+std::string Aluno::getMatricula(){
     return matricula_;
 }
 
-void Aluno::getNome(){
+std::string Aluno::getNome(){
     return nome_;
 }
 
-void Aluno::getTelefone(){
+std::string Aluno::getTelefone(){
     return telefone_;
+}
+
+std::string Aluno::getSenha() {
+    return senha_;
 }
 
 Aluno::Aluno(std::string nome, std::string telefone, std::string login,

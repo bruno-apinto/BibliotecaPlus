@@ -41,31 +41,38 @@ class Aluno{
      * @brief Retorna o nome
      * 
      */
-    void getNome();
+    std::string getNome();
 
     /**
      * @brief Retorna o telefone
      * 
      */
-    void getTelefone();
+    std::string getTelefone();
 
     /**
      * @brief Retorna o login
      * 
      */
-    void getLogin();
+    std::string getLogin();
 
     /**
      * @brief Retorna o email
      * 
      */
-    void getEmail();
+    std::string getEmail();
 
     /**
      * @brief Retorna a matricula
      * 
      */
-    void getMatricula();
+    std::string getMatricula();
+
+    /**
+     * @brief retorna a senha do aluno
+     * 
+     * @return std::string senha
+     */
+    std::string getSenha();
     
    private:
     std::string nome_;

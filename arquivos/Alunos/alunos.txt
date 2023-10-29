@@ -1,6 +1,6 @@
-{Nome $ login senha $ matricula email}
+{Nome | login | senha | matricula | email}
 
-Bruno Araujo Pinto $ brunoapinto kv8rms25 $ 2023038965 brunoapinto@gmail.com
-Beatriz Magalhaes Pissioni $ bpissioni bpissioni23 $ 2023034567 bpissioni@hotmail.com
-Samira Mansur Cunha Campos $ samimansur beterraba123 $2023039317 samimansur@ufmg.br 
-Fulano da Silva Martins $ fulaninho 65tyuoj9 $ 2023456879 fullfulano@gmail.com
+Bruno Araujo Pinto | brunoapinto | kv8rms25 | 2023038965 | brunoapinto@gmail.com | 31990623672
+Beatriz Magalhaes Pissioni | bpissioni | bpissioni23 | 2023034567 | bpissioni@hotmail.com | 31909008765
+Samira Mansur Cunha Campos | samimansur | beterraba123 |2023039317 | samimansur@ufmg.br | 33976587654
+Fulano da Silva Martins | fulaninho | 65tyuoj9 | 2023456879 | fullfulano@gmail.com | 17912345678
