@@ -9,7 +9,7 @@
 
 class AcervoLivros {
 public:
-    AcervoLivros(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula);
+    AcervoLivros(std::string login, std::string senha);
 
     std::vector<Livro> procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
     void adicionarLivro(const Livro& livro); // função que permite adicionar livros ao AcervoLivros
