@@ -1,6 +1,5 @@
 
 #include "Livro.h"
-// #include "src/Livro.cpp"
 #include "Situacao.h"
 #include <string>
 #include <vector>
@@ -22,7 +21,7 @@ class Aluno{
         std::string senha, std::string email, std::string matricula);
     
     /**
-     * @brief Funcao retorna um alista de alunos procurados
+     * @brief Funcao retorna um a lista de alunos procurados
      * 
      * @param categoria 
      * @param item 
