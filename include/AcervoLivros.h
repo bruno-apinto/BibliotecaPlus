@@ -17,13 +17,7 @@ public:
     void editarLivro(const std::string& titulo, const std::string& novoTitulo, const std::string& novoAutor, const std::string& novaEditora, const std::string& novosDetalhes); // função que permite editar as informações de livros no AcervoLivros
     void emprestarLivro(const Alunos& aluno, const Livro& livro); // função que atualiza a situação do livro para emprestado
     void receberLivro(const Alunos& aluno, const Livro& livro); // função que atualiza a situação do livro para recebido 
-    
-    /**
-     * @brief Set the Situacao object
-     * 
-     * @param novaSituacao 
-     */
-    void setSituacao(SituacaoEmprestimo novaSituacao);
+    void setStatus(Status novoStatus);
 
 private:
 
