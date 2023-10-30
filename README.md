@@ -47,15 +47,16 @@ Atributos:
 
 Métodos:
 
-    - string getSenha: retorna a senha do aluno.
-    - string getMatricula: Retorna a matricula.
-    - string getEmail: Retorna o email.
-    - string getLogin: Retorna o login.
-    - string getTelefone: Retorna o telefone.
-    - string getNome: Retorna o nome.
+    - string getSenha_: retorna a senha do aluno.
+    - string getMatricula_: Retorna a matricula.
+    - string getEmail_: Retorna o email.
+    - string getLogin_: Retorna o login.
+    - string getTelefone_: Retorna o telefone.
+    - string getNome_: Retorna o nome.
     - vector<Aluno> procurarAlunos: retorna um a lista de alunos procurados.
     - Alunos::Alunos: Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula.
     - void consultarMeusDados: Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
+    - Situacao situacao_: retorna se existe alguma pendênciam em nome do aluno, caso haja, informa o valor da multa.
 
 Classe AcervoLivros: 
 
