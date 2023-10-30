@@ -49,6 +49,51 @@ void AcervoAlunos::removerAluno(Aluno& aluno) {
     novo.close();
 }
 
-void AcervoAlunos::editarPessoa(std::string categoria, std::string novo, Aluno& aluno) {
+void AcervoAlunos::editarAluno(std::string categoria, std::string novoDado, Aluno& aluno) {
+
+    Aluno novoAluno;
+    
+    switch (categoria){
+        case "Nome":
+            
+                novoAluno (novoDado, aluno.getTelefone(), aluno.getLogin(),
+                            aluno.getSenha(), aluno.getEmail(), aluno.getMatricula());
+            
+            break;
+
+        case "Login":
+            
+                novoAluno (aluno.getNome, aluno.getTelefone(), novoDado,
+                            aluno.getSenha(), aluno.getEmail(), aluno.getMatricula());
+            
+            break;
+
+        case "Senha":
+            novoAluno (aluno.getNome(), aluno.getTelefone(), aluno.getLogin(),
+                            novoDado, aluno.getEmail(), aluno.getMatricula());
+            break;
+    
+        case "Matricula":
+        case "Matrícula":
+            
+            novoAluno (aluno.getNome(), aluno.getTelefone(), aluno.getLogin(),
+                            aluno.getSenha(), aluno.getEmail(), novoDado);
+            
+            break;
+
+        case "Email":
+            novoAluno (aluno.getNome, aluno.getTelefone(), aluno.getLogin(),
+                            aluno.getSenha(), novoDado, aluno.getMatricula());
+            break;
+
+        case "Telefone":
+            novoAluno (aluno.getNome(), novoDado, aluno.getLogin(),
+                            aluno.getSenha(), aluno.getEmail(), aluno.getMatricula());
+            
+            break;
+    }
+
+    AcervoAlunos::removerAluno(aluno);
+    AcervoAlunos::adicionarAluno(novoAluno);
 
 }

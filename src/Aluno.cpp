@@ -27,6 +27,15 @@ std::string Aluno::getSenha() {
     return senha_;
 }
 
+Aluno::Aluno(){
+    this->nome_ = "000";
+    this->login_ = "000";
+    this->senha_ = "000";
+    this->matricula_ = "000";
+    this->email_ = "000";
+    this->telefone_ = "000";
+}
+
 Aluno::Aluno(std::string nome, std::string telefone, std::string login,
                 std::string senha, std::string email, std::string matricula)
 {

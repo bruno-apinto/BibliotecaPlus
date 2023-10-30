@@ -9,15 +9,29 @@ class AcervoAlunos {
 
 public:
 
-void editarAluno(std::string categoria, std::string novo, Aluno& Aluno); // função que permite editar as informações do cadastro de usuários
-void removerAluno(Aluno& aluno); // função que permite remover cadastros
-void adicionarAluno(Aluno& aluno); // função que permite adicionar cadastro de novas pessoas
+/**
+ * @brief Edita o cadastro de um aluno, removendo o cadastro antigo e apendicionando um novo a alunos.txt
+ * 
+ * @param categoria 
+ * @param novo 
+ * @param Aluno 
+ */
+void editarAluno(std::string categoria, std::string novo, Aluno& Aluno);
 
-private:
+/**
+ * @brief Remove um Aluno de alunos.txt
+ * 
+ * @param aluno 
+ */
+void removerAluno(Aluno& aluno);
 
-std::vector<Aluno> cadastros; // lista com os alunos cadastrados
+/**
+ * @brief Apendiciona um Aluno a alunos.txt
+ * 
+ * @param aluno 
+ */
+void adicionarAluno(Aluno& aluno);
+
 };
-
-
 
 #endif
