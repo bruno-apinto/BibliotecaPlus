@@ -38,105 +38,91 @@ Classe Aluno:
 
 Atributos: 
 
-    - string nome_:
-    - string telefone_:
-    - string login_:
-    - string senha_:
-    - string email_:
-    - string matricula_:
+    - string nome_: nome do aluno.
+    - string telefone_: número de contato do aluno.
+    - string login_: apelido do cadastro do aluno.
+    - string senha_: código de acesso individual.
+    - string email_: email do aluno. 
+    - string matricula_: número de matriculado.
 
 Métodos:
 
-    - void getMatricula();
-    - void getEmail();
-    - void getLogin();
-    - void getTelefone();
-    - void getNome();
-    - procurarAlunos;
-    - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
-    - consultarMeusDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
+    - string getSenha: retorna a senha do aluno.
+    - string getMatricula: Retorna a matricula.
+    - string getEmail: Retorna o email.
+    - string getLogin: Retorna o login.
+    - string getTelefone: Retorna o telefone.
+    - string getNome: Retorna o nome.
+    - vector<Aluno> procurarAlunos: retorna um a lista de alunos procurados.
+    - Alunos::Alunos: Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula.
+    - void consultarMeusDados: Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
 
 Classe AcervoLivros: 
 
-Atributos: 
-
-    - login
-    - senha
-
 Métodos: 
 
-    - procurarLivros(parametro, item, livrosEncontrados): busca de livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
-    - adicionarLivro(livro): Permite adicionar um livro ao acervo da biblioteca.
-    - removerLivro(titulo): Permite remover um livro do acervo com base no título do livro.
-    - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite  editar as informações de um livro no acervo com base no título. Atualiza o título, autor, editora e detalhes do livro.
-    - emprestarLivro(aluno, livro): Permite registrar o empréstimo de um livro a um aluno. Isso atualiza a situação do livro para "emprestado".
-    - receberLivro(aluno, livro): Permite registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
-    - setSituacao(novaSituacao): Define a situação do empréstimo de um livro. Isso pode ser usado para atualizar a situação de um livro para "disponível", "atrasado" ou "perdido".
+    - vector<Livro> procurarLivros: busca de livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
+    - void adicionarLivro: Permite adicionar um livro ao acervo da biblioteca.
+    - void removerLivro: Permite remover um livro do acervo com base no título do livro.
+    - void editarLivro: Permite  editar as informações de um livro no acervo com base no título. Atualiza o título, autor, editora e detalhes do livro.
+    - void emprestarLivro: Permite registrar o empréstimo de um livro a um aluno. Isso atualiza a situação do livro para "emprestado".
+    - void receberLivro: Permite registrar a devolução de um livro por um aluno. Isso atualiza a situação do livro para "recebido".
 
 Classe AcervoAlunos:
 
     Métodos:
 
-    - void editarAluno;
-    - void removerAluno;
-    - void adicionarAluno;
+    - void editarAluno: Edita o cadastro de um aluno, removendo o cadastro antigo e apendicionando um novo a alunos.txt.
+    - void removerAluno: Remove um Aluno de alunos.txt.
+    - void adicionarAluno: Apendiciona um Aluno a alunos.txt.
     
 Classe Livro:
 
 Atributos:
 
-    - nome_ (std::string): Armazena o nome do livro.
-    - autor_ (std::string): Armazena o nome do autor do livro.
-    - ano_ (std::int): Armazena o ano de publicação do livro.
-    - edicao_ (std::int): Armazena a edição do livro.
-    - editora_ (std::string): Armazena o nome da editora do livro.
-    - ID_ (std::int): Armazena um número de identificação único para o livro.
-    - dataEmprestimo_ (int): Armazena a data em que o livro foi emprestado, se aplicável.
+    - string nome_: Armazena o nome do livro.
+    - string autor_: Armazena o nome do autor do livro.
+    - string ano_: Armazena o ano de publicação do livro.
+    - string edicao_: Armazena a edição do livro.
+    - string editora_: Armazena o nome da editora do livro.
+    - string ID_: Armazena um número de identificação único para o livro.
+    - string dataEmprestimo_: Armazena a data em que o livro foi emprestado, se aplicável.
 
 Métodos:
 
     - Livro::Livro: Construtor da classe Livro. Ele inicializa todos os atributos do livro com os valores fornecidos.
-
-    - getNome() const: Método que retorna o nome do livro.
-    - getAutor() const: Método que retorna o nome do autor do livro.
-    - getAno() const: Método que retorna o ano de publicação do livro.
-    - getEdicao() const: Método que retorna a edição do livro.
-    - getEditora() const: Método que retorna o nome da editora do livro.
-    - getStatus() const: Método que retorna a situação do empréstimo do livro (Disponível, Emprestado, Atrasado ou Perdido).
-    - getID() const: Método que retorna o número de identificação único do livro. 
-    - comparar(Livro& livro): Método que compara dois livros para verificar se são iguais com base em vários atributos, como nome, autor, ano, edição, etc. Retorna true se forem iguais e false se forem diferentes.
-    - procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados): Método que permite a busca de livros com base em um parâmetro específico, como "Autor," "Nome," "Editora," etc. Ele retorna uma lista de livros que correspondem ao critério de busca.
+    - string getNome: Método que retorna o nome do livro.
+    - string getAutor: Método que retorna o nome do autor do livro.
+    - string getAno: Método que retorna o ano de publicação do livro.
+    - string getEdicao: Método que retorna a edição do livro.
+    - string getEditora: Método que retorna o nome da editora do livro.
+    - status getStatus: Método que retorna a situação do empréstimo do livro (Disponível, Emprestado, Atrasado ou Perdido).
+    - string getID: Método que retorna o número de identificação único do livro. 
+    - bool Livro::comparar: Método que compara dois livros para verificar se são iguais com base em vários atributos, como nome, autor, ano, edição, etc. Retorna true se forem iguais e false se forem diferentes.
+    - vector<Livro> procurarLivros: Método que permite a busca de livros com base em um parâmetro específico, como "Autor," "Nome," "Editora," etc. Ele retorna uma lista de livros que correspondem ao critério de busca.
 
 Classe Notificacao:
 
-Atributos:
-
-    - smtpServer (string): O endereço do servidor SMTP a ser usado para enviar notificações por email.
-    - smtpPort (int): A porta do servidor SMTP a ser usada para enviar notificações por email.
-    - smtpUsername (string): O nome de usuário usado para autenticar no servidor SMTP.
-    - smtpPassword (string): A senha usada para autenticar no servidor SMTP.
-
 Métodos:
 
-    - enviarNotificacao(aluno: Alunos, assunto: string, corpo: string): bool: Este método recebe um objeto Alunos, um assunto e o corpo da notificação como entrada. Ele verifica se o aluno tem pendências e, se tiver, envia uma notificação para o email do aluno com o assunto e corpo especificados. Retorna true se a notificação for enviada com sucesso, ou false se houver algum erro no envio.
-    - setConfiguracoesSMTP(servidor: string, porta: int, username: string, senha: string): Este método permite definir as configurações do servidor SMTP para uso na classe. Ele recebe o endereço do servidor, a porta, o nome de usuário e a senha para autenticação no servidor SMTP.
-    - escolherDestinatarioComPendencia(alunos: vector<Alunos>): vector<Alunos>: Este método recebe uma lista de objetos Alunos como entrada e retorna uma lista contendo apenas os alunos que têm pendências na biblioteca. Isso é útil para selecionar os destinatários corretos antes de enviar notificações.
-    - enviarNotificacoesPendentes(alunosComPendencia: vector<Alunos>, assunto: string, corpo: string): vector<string>: Este método recebe uma lista de alunos com pendências, um assunto e um corpo como entrada, e envia notificações para todos eles. Ele retorna uma lista de endereços de email para os quais as notificações foram enviadas com sucesso.
+    - void notificarPendencia: notifica a pendência.
+    - void enviarEmail: envia um email para o aluno devedor.
 
 Classe Situacao:
 
 Atributos:
 
-    - pendencia_
-    - multa_
-    - livrosEmprestados_
+    - pendencia_: atributo booleano que indica se existe pendência ou não.
+    - multa_: valor da multa a ser paga.
+    - livrosEmprestados_: lista com os livros atualmente emprestados para o aluno.
 
 Métodos:
 
-    - int calcularMulta
-    - getSituacao
-    - setSituacao
-    - getLivrosEmprestados
+    - int calcularMulta: calcula a multa.
+    - getSituacao: retorna se a pendencia ou nao.
+    - setSituacao: altera se ha pendencia ou nao.
+    - getLivrosEmprestados: exibe a lista de livros emprestados em nome do aluno.
+    - Situacao::Situacao: construtor de situacao.
 
 Instruções de instalação:
 
