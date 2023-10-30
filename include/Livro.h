@@ -2,12 +2,13 @@
 #define LIVRO_H
 
 #include <string>
+#include <vector>
 
 /**
  * @brief Indica o status do livro
  * 
  */
-enum class status {
+enum status {
     Disponivel,
     Emprestado,
     Atrasado,
@@ -17,7 +18,7 @@ enum class status {
 class Livro {
 public:
 
-    Livro::Livro (std::string nome, std::string autor, std::string ano, 
+    Livro (std::string nome, std::string autor, std::string ano, 
         std::string edicao, std::string editora, std::string ID);
 
         std::string dataEmprestimo;
@@ -68,7 +69,7 @@ public:
      * 
      * @return SituacaoEmprestimo 
      */
-    status getStatus() const;
+    std::string getStatus() const;
 
     
     /**
@@ -78,7 +79,7 @@ public:
      * @return true é igual
      * @return false é diferente
      */
-    bool Livro::comparar (Livro& livro);
+    bool comparar (Livro& livro);
 
     /**
      * @brief 
@@ -96,7 +97,7 @@ public:
      * 
      * @param novoStatus 
      */
-    void setStatus(Status novoStatus);
+    void setStatus();
 
 
 private:
@@ -108,7 +109,7 @@ private:
     std::string editora_;
     std::string ID_;
     std::string dataEmprestimo_;
-    enum status status_;
+    std::string status_;
 };
 
 #endif

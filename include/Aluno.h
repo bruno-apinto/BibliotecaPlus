@@ -1,5 +1,5 @@
-#include "Livro.h"
-#include "Situacao.h"
+// #include "Livro.h"
+#include "../include/Situacao.h"
 #include <string>
 #include <vector>
 
@@ -17,7 +17,7 @@ class Aluno{
      * @param matricula 
      */
     Aluno (std::string nome, std::string telefone, std::string login,
-        std::string senha, std::string email, std::string matricula);
+        std::string senha, std::string email, std::string matricula, bool pendencia);
     
     /**
      * @brief Funcao retorna um a lista de alunos procurados
@@ -28,7 +28,7 @@ class Aluno{
      * @return std::vector<Aluno> 
      */
     std::vector<Aluno> procurarAlunos
-            (std::string categoria, std::string item, std::vector<Livro> alunosEncontrados); 
+            (std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados); 
             
     /**
      * @brief Imprime os dados do cadastro na tela
@@ -72,6 +72,8 @@ class Aluno{
      * @return std::string senha
      */
     std::string getSenha();
+    Situacao getSituacao();
+    void setSituacao();
     
    private:
     std::string nome_;
@@ -79,7 +81,7 @@ class Aluno{
     std::string login_;
     std::string senha_;
     std::string email_;
-    std::string matricula_; 
+    std::string matricula_;
     Situacao situacao_;
 };
 

@@ -7,7 +7,7 @@
 
 class Situacao {
 public:
-    Situacao::Situacao();//construtor de situacao
+    Situacao();//construtor de situacao
     bool getSituacao(); //retorna se a pendencia ou nao
     void setSituacao(bool pendencia); //altera se ha pendencia ou nao
     const std::vector<std::string>& getLivrosEmprestados() const;

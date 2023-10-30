@@ -1,14 +1,15 @@
-#ifndef ACERVOALUNOS_H
-#define ACERVOALUNOS_H
+// #ifndef ACERVOALUNOS_H
+// #define ACERVOALUNOS_H
 
-#include "Aluno.h"
+#include "./Aluno.h"
+#include "../src/Aluno.cpp"
 #include <string>
 #include <vector>
 
 class AcervoAlunos {
 
 public:
-
+AcervoAlunos();
 /**
  * @brief Edita o cadastro de um aluno, removendo o cadastro antigo e apendicionando um novo a alunos.txt
  * 
@@ -30,8 +31,8 @@ void removerAluno(Aluno& aluno);
  * 
  * @param aluno 
  */
-void adicionarAluno(Aluno& aluno);
+void adicionarAluno(Aluno aluno);
 
 };
 
-#endif
+// #endif
