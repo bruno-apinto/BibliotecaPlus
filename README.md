@@ -38,12 +38,12 @@ Classe Aluno:
 
 Atributos: 
 
-    - string nome
-    - string telefone
-    - string login
-    - string senha
-    - string email
-    - string matricula
+    - string nome_:
+    - string telefone_:
+    - string login_:
+    - string senha_:
+    - string email_:
+    - string matricula_:
 
 Métodos:
 
