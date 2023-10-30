@@ -9,7 +9,7 @@ class Situacao {
 public:
     Situacao::Situacao();//construtor de situacao
     bool getSituacao(); //retorna se a pendencia ou nao
-    void setSituacao() const; //altera se ha pendencia ou nao
+    void setSituacao(bool pendencia); //altera se ha pendencia ou nao
     const std::vector<std::string>& getLivrosEmprestados() const;
     int calcularMulta(const std::chrono::system_clock::time_point& dataDevolucao);
 
