@@ -52,10 +52,8 @@ Métodos:
     - void getLogin();
     - void getTelefone();
     - void getNome();
-    - procurarAlunos
-
+    - procurarAlunos;
     - Alunos::Alunos(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula): Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula. Além disso, inicializa a situação sem pendências, com multa igual a zero e sem livros emprestados.
-    
     - consultarMeusDados(): Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
 
 Classe AcervoLivros: 
@@ -65,11 +63,9 @@ Atributos:
     - login
     - senha
 
-
 Métodos: 
 
     - procurarLivros(parametro, item, livrosEncontrados): busca de livros no acervo com base em um parâmetro (título, autor, editora, detalhes) e um item de pesquisa. A função retorna uma lista de livros encontrados.
-
     - adicionarLivro(livro): Permite adicionar um livro ao acervo da biblioteca.
     - removerLivro(titulo): Permite remover um livro do acervo com base no título do livro.
     - editarLivro(titulo, novoTitulo, novoAutor, novaEditora, novosDetalhes): Permite  editar as informações de um livro no acervo com base no título. Atualiza o título, autor, editora e detalhes do livro.
@@ -79,15 +75,11 @@ Métodos:
 
 Classe AcervoAlunos:
 
-    Atributos:
-
-    - cadastros
-
     Métodos:
 
-    - void editarAluno
-    - void removerAluno
-    - void adicionarAluno
+    - void editarAluno;
+    - void removerAluno;
+    - void adicionarAluno;
     
 Classe Livro:
 
