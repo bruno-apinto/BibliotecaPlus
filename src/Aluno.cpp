@@ -54,78 +54,24 @@ void Aluno::consultarMeusDados() {
     std::cout << "Matrícula: " << matricula_ << std::endl;
 }
 
-std::vector<Aluno> Aluno::procurarAlunos 
-        (std::string categoria, std::string item, std::vector<Livro> alunosEncontrados) 
-{
-    if (!(categoria.compare("Nome"))){
+std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
+    std::vector<Aluno> auxiliar;
 
-        std::vector<Aluno> auxiliar;
-        for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
-        
-            if (it->getNome().compare(item)){
-                auxiliar.push_back(*it);
-            }
+    for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++) {
+        if (categoria == "Nome" && it->getNome() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Telefone" && it->getTelefone() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Login" && it->getLogin() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Email" && it->getEmail() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Matricula" && it->getMatricula() == item) {
+            auxiliar.push_back(*it);
         }
-
-        return auxiliar;
     }
 
-    else if (!(categoria.compare("Telefone"))){
-
-        std::vector<Aluno> auxiliar;
-        for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
-        
-            if (it->getTelefone().compare(item)){
-                auxiliar.push_back(*it);
-            }
-        }
-
-        return auxiliar;
-
-    }
-
-    else if (!(categoria.compare("Login"))){
-
-        std::vector<Aluno> auxiliar;
-        for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
-    
-            if (it->getLogin().compare(item)){
-                auxiliar.push_back(*it);
-            }
-        }
-
-        return auxiliar;
-
-    }
-
-    else if (!(categoria.compare("Email"))){
-
-        std::vector<Aluno> auxiliar;
-        for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
-        
-            if (it->getEmail().compare(item)){
-                auxiliar.push_back(*it);
-            }
-        }
-
-        return auxiliar;
-
-    }
-
-    else if (!(categoria.compare("Matricula"))){
-
-        std::vector<Aluno> auxiliar;
-        for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++){
-        
-            if (it->getMatricula().compare(item)){
-                auxiliar.push_back(*it);
-            }
-        }
-
-        return auxiliar;
-
-    }
-
+    return auxiliar;
 }
 
 

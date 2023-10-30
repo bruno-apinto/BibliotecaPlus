@@ -6,7 +6,6 @@
 class Aluno{
     public:
 
-    Aluno ();
     /**
      * @brief Construtor de Aluno
      * 
