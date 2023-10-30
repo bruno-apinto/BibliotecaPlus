@@ -3,7 +3,7 @@ Sistema de Biblioteca Avançado:
 
 Descrição do Projeto/ Apresentação do problema:  
 
-As bibliotecas da universidade precisam de um sistema que controle o estoque de livros, permita consulta de títulos, gerencie multas, atrasos de devolução e envie notificações sobre devoluções atrasadas. É necessário que o sistema seja de fácil implementação, eficiente, tenha interface intuitiva e que incorpore os princípios de programação orientada a objetos. O programa deve atender bibliotecários e alunos, cada um com suas atribuições.
+As bibliotecas da universidade precisam de um sistema que controle o estoque de livros, permita consulta de títulos, gerencie multas, atrasos de devolução e envie notificações sobre devoluções atrasadas. É necessário que o sistema seja de fácil implementação, eficiente, com interface intuitiva e incorpora com os princípios de programação orientada a objetos. O programa deve atender a bibliotecários e alunos, cada um com suas atribuições.
 
 Requisitos de Projeto: 
 
@@ -32,7 +32,7 @@ Requisitos não funcionais:
     - Código bem documentado e organizado. 
 
 Modelagem básica do sistema: 
-    Terão seis classes principais: Aluno, AcervoLivros, AcervoAlunos, situacao, Livro e Notificacao. 
+    Terão seis classes principais: Aluno, AcervoLivros, AcervoAlunos, Situacao, Livro e Notificacao. 
 
 Classe Aluno: 
 
@@ -44,6 +44,7 @@ Atributos:
     - string senha_: código de acesso individual.
     - string email_: email do aluno. 
     - string matricula_: número de matriculado.
+    - Situacao situacao_: estado de relação do aluno com a biblioteca
 
 Métodos:
 
@@ -53,7 +54,7 @@ Métodos:
     - string getLogin_: Retorna o login.
     - string getTelefone_: Retorna o telefone.
     - string getNome_: Retorna o nome.
-    - vector<Aluno> procurarAlunos: retorna um a lista de alunos procurados.
+    - vector<Aluno> procurarAlunos: retorna uma lista de alunos procurados.
     - Alunos::Alunos: Construtor da classe que permite criar um objeto aluno com informações iniciais, como nome, telefone, login, senha, email e matrícula.
     - void consultarMeusDados: Método que permite ao aluno consultar e exibir seus dados pessoais, incluindo nome, telefone, login, email e matrícula.
     - Situacao situacao_: retorna se existe alguma pendênciam em nome do aluno, caso haja, informa o valor da multa.
@@ -88,6 +89,7 @@ Atributos:
     - string editora_: Armazena o nome da editora do livro.
     - string ID_: Armazena um número de identificação único para o livro.
     - string dataEmprestimo_: Armazena a data em que o livro foi emprestado, se aplicável.
+    - enum status status_: enum com a característica do livro (emprestado, regular, perdido)
 
 Métodos:
 
@@ -113,16 +115,16 @@ Classe Situacao:
 
 Atributos:
 
-    - pendencia_: atributo booleano que indica se existe pendência ou não.
-    - multa_: valor da multa a ser paga.
-    - livrosEmprestados_: lista com os livros atualmente emprestados para o aluno.
+    - bool pendencia_: atributo booleano que indica se existe pendência ou não.
+    - int multa_: valor da multa a ser paga.
+    - vector<string> livrosEmprestados_: lista com os livros atualmente emprestados para o aluno.
 
 Métodos:
 
     - int calcularMulta: calcula a multa.
-    - getSituacao: retorna se a pendencia ou nao.
-    - setSituacao: altera se ha pendencia ou nao.
-    - getLivrosEmprestados: exibe a lista de livros emprestados em nome do aluno.
+    - string getSituacao: retorna se a pendencia ou nao.
+    - string setSituacao: altera se ha pendencia ou nao.
+    - string getLivrosEmprestados: exibe a lista de livros emprestados em nome do aluno.
     - Situacao::Situacao: construtor de situacao.
 
 Instruções de instalação:
