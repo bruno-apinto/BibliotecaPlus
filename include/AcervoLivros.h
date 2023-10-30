@@ -22,6 +22,6 @@ public:
 private:
 
     std::vector<Livro> AcervoLivros; // lista com os livros do AcervoLivros
-    std::vector<Alunos> cadastros; // lista com os alunos cadastrados
+    std::vector<Aluno> cadastros; // lista com os alunos cadastrados
 };
 #endif
