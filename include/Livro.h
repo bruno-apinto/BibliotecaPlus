@@ -3,6 +3,10 @@
 
 #include <string>
 
+/**
+ * @brief Indica o status do livro
+ * 
+ */
 enum class status {
     Disponivel,
     Emprestado,
@@ -95,8 +99,8 @@ private:
     std::string edicao_;
     std::string editora_;
     std::string ID_;
-    string dataEmprestimo_;
-    Status status_;
+    std::string dataEmprestimo_;
+    enum status status_;
 };
 
 #endif
