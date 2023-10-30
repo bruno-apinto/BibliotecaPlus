@@ -156,7 +156,7 @@ Estrutura do projeto:
 
 - bin: É o diretório onde os arquivos executáveis são gerados após a compilação do código-fonte. Aqui, você encontrará o executável principal do sistema, que pode ser usado para iniciar a aplicação.
 
-- data: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
+- arquivos: O diretório "data" armazena dados de exemplo, como informações de livros, informações de alunos e outros dados que podem ser usados para testar o sistema.
 
 Principais dificuldades:
 - Integração das classes: Garantir que as classes Alunos, Acervo, Livro e Notificacao se integrassem de maneira eficaz, com troca de informações e funcionalidades entre elas.
