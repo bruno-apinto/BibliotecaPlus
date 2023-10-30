@@ -91,6 +91,14 @@ public:
     std::vector<Livro> procurarLivros 
             (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
 
+    /**
+     * @brief Altera a situacao do livro
+     * 
+     * @param novoStatus 
+     */
+    void setStatus(Status novoStatus);
+
+
 private:
 
     std::string nome_;
