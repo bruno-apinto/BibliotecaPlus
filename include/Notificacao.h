@@ -5,7 +5,7 @@
 
 class Notificacao {
 public:
-    void notificarAlunosComPendencia(const std::vector<Aluno>& alunos);
+    void notificarPendencia(const std::vector<Aluno>& alunos);
 
 private:
     void enviarEmail(const std::string& destinatario);

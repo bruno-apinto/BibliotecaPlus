@@ -3,7 +3,6 @@
 
 #include "Aluno.h"
 #include "Livro.h"
-#include "Aluno.cpp"
 #include <string>
 #include <vector>
 
