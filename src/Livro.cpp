@@ -1,4 +1,4 @@
-#include "Livro.h"
+#include "../include/Livro.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -7,7 +7,7 @@
  * @brief Construtor de Livro(vazio)
  * 
  */
-Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
+// Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
 
 /**
  * @brief Construct a new Livro:: Livro object
@@ -21,7 +21,7 @@ Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
  */
 Livro::Livro(std::string nome, std::string autor, std::string ano,
     std::string edicao, std::string editora, std::string ID) : nome_(nome), autor_(autor), ano_(ano),
-        edicao_(edicao), editora_(editora), ID_(ID), status_(status::Disponivel) {}
+        edicao_(edicao), editora_(editora), ID_(ID), status_("teste") {}
 
 std::string Livro::getNome() const {
     return nome_;
@@ -47,7 +47,7 @@ std::string Livro::getID() const {
     return ID_;
 }
 
-Status Livro::getStatus() const {
+std::string Livro::getStatus() const {
     return status_;
 }
 
@@ -66,9 +66,7 @@ bool Livro::comparar (Livro& livro){
     return indice;
 }
 
-std::vector<Livro> Livro::procurarLivros
-
-    (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados) {
+std::vector<Livro> Livro::procurarLivros (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados) {
     
     if (!(parametro.compare("Autor"))){
 
@@ -144,7 +142,7 @@ std::vector<Livro> Livro::procurarLivros
         std::vector<Livro> auxiliar;
         for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
         
-            if (it->getNumero().compare(item)){
+            if (it->getID().compare(item)){
                 auxiliar.push_back(*it);
             }
         }
@@ -152,4 +150,7 @@ std::vector<Livro> Livro::procurarLivros
         return auxiliar;
 
     }
+            std::vector<Livro> auxiliar;
+        return auxiliar;
+
 }

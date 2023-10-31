@@ -1,4 +1,4 @@
-#include "include/Situacao.h"
+#include "../include/Situacao.h"
 #include <iostream>
 #include <vector>
 #include <string>

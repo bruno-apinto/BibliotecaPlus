@@ -1,7 +1,7 @@
-#include "Notificacao.h"
+#include "../include/Notificacao.h"
 #include <mailio/message.hpp>
 #include <mailio/smtp.hpp>
-#include "include/Aluno.h"
+#include "../include/Aluno.h"
 
 void Notificacao::notificarPendencia(const std::vector<Aluno>& alunos) {
     for (const Aluno& aluno : alunos) {

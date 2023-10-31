@@ -1,7 +1,22 @@
-#include "include/Livro.h"
-#include "include/Aluno.h"
+// #include "../include/Livro.h"
+#include "../include/Aluno.h"
 #include <iostream>
-#include "include/Situacao.h"
+#include "../include/Situacao.h"
+
+Aluno::Aluno(std::string nome, std::string telefone, std::string login,
+                std::string senha, std::string email, std::string matricula, bool pendencia)
+{
+    nome_ = nome;
+    telefone_ = telefone;
+    login_ = login;
+    senha_ = senha;
+    email_ = email;
+    matricula_ =  matricula;
+    situacao_.setSituacao(pendencia);
+
+
+}
+
 
 std::string Aluno::getEmail(){
     return email_;
@@ -26,26 +41,23 @@ std::string Aluno::getTelefone(){
 std::string Aluno::getSenha() {
     return senha_;
 }
-
-Aluno::Aluno(){
-    this->nome_ = "000";
-    this->login_ = "000";
-    this->senha_ = "000";
-    this->matricula_ = "000";
-    this->email_ = "000";
-    this->telefone_ = "000";
+Situacao Aluno::getSituacao() {
+    return situacao_;
 }
 
-Aluno::Aluno(std::string nome, std::string telefone, std::string login,
-                std::string senha, std::string email, std::string matricula)
-{
-    nome_ = nome;
-    telefone_ = telefone;
-    login_ = login;
-    senha_ = senha;
-    email_ = email;
-    matricula_ =  matricula;
-}
+// std::string Aluno::getSenha() {
+//     return senha_;
+// }
+
+// Aluno::Aluno(){
+//     this->nome_ = "000";
+//     this->login_ = "000";
+//     this->senha_ = "000";
+//     this->matricula_ = "000";
+//     this->email_ = "000";
+//     this->telefone_ = "000";
+// }
+
 void Aluno::consultarMeusDados() {
     std::cout << "Nome: " << nome_ << std::endl;
     std::cout << "Telefone: " << telefone_ << std::endl;

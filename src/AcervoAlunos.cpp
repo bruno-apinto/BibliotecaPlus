@@ -1,9 +1,12 @@
-#include "include/AcervoAlunos.h"
-#include "include/Aluno.h"
+#include "../include/AcervoAlunos.h"
+#include "../include/Aluno.h"
 #include <string>
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <cstring>
+
+AcervoAlunos::AcervoAlunos();
 
 std::string formatacao (Aluno& aluno) {
     std::string linha;
