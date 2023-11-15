@@ -2,7 +2,6 @@
 // #define ACERVOALUNOS_H
 
 #include "./Aluno.h"
-#include "../src/Aluno.cpp"
 #include <string>
 #include <vector>
 

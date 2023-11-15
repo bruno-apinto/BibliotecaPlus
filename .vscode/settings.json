@@ -76,5 +76,6 @@
         "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "C_Cpp.dimInactiveRegions": false
+    "C_Cpp.dimInactiveRegions": false,
+    "cmake.sourceDirectory": "/home/brunopinto/programação/BibliotecaPlus/BibliotecaPlus/mailio-0.23.0"
 }

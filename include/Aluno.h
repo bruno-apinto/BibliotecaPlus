@@ -29,7 +29,9 @@ class Aluno{
      */
     std::vector<Aluno> procurarAlunos
             (std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados); 
-            
+
+    std::vector<Aluno> procurarAlunos
+            (std::string categoria, std::string item);
     /**
      * @brief Imprime os dados do cadastro na tela
      * 
