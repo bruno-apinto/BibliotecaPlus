@@ -72,6 +72,9 @@ void Aluno::setSituacao(bool situacao){
 
 }
 
+std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item){
+    std::vector<Aluno> lista;
+}
 
 std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
     std::vector<Aluno> auxiliar;
