@@ -17,11 +17,23 @@ std::vector<Livro> AcervoLivros::procurarLivros (std::string categoria, std::str
 
     vector<string> linhas;
     string linha;
-    std::ifstream leituraPadrão ("arquivos/livros/livros.txt");
+    std::ifstream leituraPadrao ("arquivos/livros/livros.txt");
+
+    int i = 1;
 
     
-    while (leituraPadrão, linha) {
-        linhas.pushback(linha);
+    while (//fim do arq
+    ) {
+        getline (leituraPadrao, linha, "|");
+
+        switch (i%6) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+        }
     }
     
     leituraPadrão.close();
