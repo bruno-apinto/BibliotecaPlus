@@ -18,7 +18,11 @@ using std::vector;
 using std::endl;
 
 void verSituacaoAluno(string* ID){
-    
+
+    Aluno estudante;
+    estudante = estudante.procurarAlunos("matricula", *ID);
+
+    cout << "\nSituacao: " << estudante.getSituacao() << endl;
 }
 
 void verDadosAluno(string* ID){
@@ -26,7 +30,7 @@ void verDadosAluno(string* ID){
     estudante = estudante.procurarAlunos("matricula", *ID);
 
     cout << estudante.getNome() << endl << estudante.getLogin() << endl;
-    cout << estudante.getEmail << endl << estudante.getTelefone();
+    cout << estudante.getEmail() << endl << estudante.getTelefone() << endl;
 }
 
 void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
@@ -148,7 +152,7 @@ void aluno(string* IDENTIFICACAO){
     int input = 10;
 
     while (input){
-        cout << "\n[1] - Buscar\n[2] - Ver dados\n[3] - Ver situacao\n[4] - Voltar\n\n";
+        cout << "\n[1] - Buscar livro\n[2] - Ver dados\n[3] - Ver situacao\n[4] - SAIR\n\n";
         cin >> input;
 
         switch(input){
@@ -159,9 +163,13 @@ void aluno(string* IDENTIFICACAO){
                 verDadosAluno(IDENTIFICACAO);
                 break;
             case 3:
+                verSituacaoAluno(IDENTIFICACAO);
             case 4:
+                return 0;
+                break;
             default:
-
+                cout << "acao invalida\n";
+                break;
         }
     }
 }
