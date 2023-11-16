@@ -15,28 +15,32 @@ AcervoLivros::AcervoLivros() {}
 
 std::vector<Livro> AcervoLivros::procurarLivros (std::string categoria, std::string item) {
 
-    vector<string> linhas;
     string linha;
     std::ifstream leituraPadrao ("arquivos/livros/livros.txt");
 
     int i = 1;
-
+    string caracteristicas[7];
+    vector<Livro> lista;
     
-    while (//fim do arq
-    ) {
+    
+    while (!leituraPadrao.eof()) {
         getline (leituraPadrao, linha, "|");
+        caracteristicas[i%8] = linha;
 
-        switch (i%6) {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
+        if (i%8 == 0) {
+            lista.push_back(Livro(caracteristicas[0], caracteristicas[1], caracteristicas[2],
+                                    caracteristicas[3], caracteristicas[4], caracteristicas[5], 
+                                    caracteristicas[6], " "));
         }
-    }
+        i++;
+        }
+
     
-    leituraPadrão.close();
+    leituraPadrao.close();
+
+    lista = AcervoLivros::procurarLivros(categoria, item, lista);
+    
+    return lista;
 
 }
 
