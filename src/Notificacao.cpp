@@ -21,6 +21,6 @@ void Notificacao::enviarEmail(const std::string& destinatario) {
     msg.content("Olá! Você possui uma pendência com a biblioteca. Para resolvê-la, devolva o livro emprestado e pague a multa. A Biblioteca Plus agradece!");
 
     mailio::smtps conn("smtp.gmail.com", 587);
-    conn.authenticate("seuemail@gmail.com", "suaSenha", mailio::smtps::auth_method_t::START_TLS);
+    conn.authenticate("naoresponda.biblioteca.plus@gmail.com", "tppds2023", mailio::smtps::auth_method_t::START_TLS);
     conn.submit(msg);
 }
