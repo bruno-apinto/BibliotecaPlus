@@ -6,7 +6,6 @@
 #include "include/Aluno.h"
 #include "include/Livro.h"
 #include "include/Situacao.h"
-#include "AcervoLivros.h"
 
 using std::vector;
 using std::string;
@@ -39,7 +38,6 @@ std::vector<Livro> AcervoLivros::procurarLivros (std::string categoria, std::str
     leituraPadrao.close();
 
     lista = AcervoLivros::procurarLivros(categoria, item, lista);
-    
     return lista;
 
 }
