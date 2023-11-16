@@ -7,6 +7,12 @@ class Aluno{
     public:
 
     /**
+     * @brief Construtor padrão
+     * 
+     */
+    Aluno (): Aluno("A", "B", "C", "D", "E", "F", false);
+
+    /**
      * @brief Construtor de Aluno
      * 
      * @param nome 
@@ -74,8 +80,20 @@ class Aluno{
      * @return std::string senha
      */
     std::string getSenha();
+
+    /**
+     * @brief mostra a situacao do aluno
+     * 
+     * @return Situacao 
+     */
     Situacao getSituacao();
-    void setSituacao();
+
+    /**
+     * @brief Altera a situacao da pessoa com a biblioteca
+     * 
+     * @param pendencia 
+     */
+    void setSituacao(bool pendencia);
     
    private:
     std::string nome_;

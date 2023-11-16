@@ -2,6 +2,9 @@
 #include "../include/Aluno.h"
 #include <iostream>
 #include "../include/Situacao.h"
+#include "Aluno.h"
+
+Aluno::Aluno() {}
 
 Aluno::Aluno(std::string nome, std::string telefone, std::string login,
                 std::string senha, std::string email, std::string matricula, bool pendencia)
@@ -16,7 +19,6 @@ Aluno::Aluno(std::string nome, std::string telefone, std::string login,
 
 
 }
-
 
 std::string Aluno::getEmail(){
     return email_;
@@ -64,6 +66,10 @@ void Aluno::consultarMeusDados() {
     std::cout << "Login: " << login_ << std::endl;
     std::cout << "Email: " << email_ << std::endl;
     std::cout << "Matrícula: " << matricula_ << std::endl;
+}
+
+void Aluno::setSituacao(bool situacao){
+
 }
 
 std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
