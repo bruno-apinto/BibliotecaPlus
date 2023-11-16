@@ -6,7 +6,7 @@
 #include <fstream>
 #include <cstring>
 
-AcervoAlunos::AcervoAlunos();
+AcervoAlunos::AcervoAlunos() {}
 
 std::string formatacao (Aluno& aluno) {
     std::string linha;
@@ -96,7 +96,5 @@ void AcervoAlunos::editarAluno(std::string categoria, std::string novoDado, Alun
             break;
     }
 
-    AcervoAlunos::removerAluno(aluno);
-    AcervoAlunos::adicionarAluno(novoAluno);
 
 }

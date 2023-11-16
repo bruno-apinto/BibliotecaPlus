@@ -10,7 +10,8 @@ class AcervoLivros {
 public:
 
     AcervoLivros();
-    std::vector<Livro> procurarLivros(std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
+    std::vector<Livro> procurarLivros(std::string categoria, std::string item)
+    std::vector<Livro> procurarLivros(std::string categoria, std::string item, std::vector<Livro> livrosEncontrados);
     void adicionarLivro( Livro& livro); // função que permite adicionar livros ao AcervoLivros
     void removerLivro(std::string& titulo); // função que permite remover livros do AcervoLivros
     void editarLivro(std::string& titulo, std::string& novoTitulo, std::string& novoAutor, std::string& novaEditora, std::string& novosDetalhes); // função que permite editar as informações de livros no AcervoLivros
