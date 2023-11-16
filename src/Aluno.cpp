@@ -72,28 +72,6 @@ void Aluno::setSituacao(bool situacao){
 
 }
 
-std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item){
-    std::vector<Aluno> lista;
-}
 
-std::vector<Aluno> Aluno::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
-    std::vector<Aluno> auxiliar;
-
-    for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++) {
-        if (categoria == "Nome" && it->getNome() == item) {
-            auxiliar.push_back(*it);
-        } else if (categoria == "Telefone" && it->getTelefone() == item) {
-            auxiliar.push_back(*it);
-        } else if (categoria == "Login" && it->getLogin() == item) {
-            auxiliar.push_back(*it);
-        } else if (categoria == "Email" && it->getEmail() == item) {
-            auxiliar.push_back(*it);
-        } else if (categoria == "Matricula" && it->getMatricula() == item) {
-            auxiliar.push_back(*it);
-        }
-    }
-
-    return auxiliar;
-}
 
 

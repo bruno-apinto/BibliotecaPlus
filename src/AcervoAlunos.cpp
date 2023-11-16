@@ -8,6 +8,30 @@
 
 AcervoAlunos::AcervoAlunos() {}
 
+std::vector<Aluno> AcervoAlunos::procurarAlunos(std::string categoria, std::string item){
+    std::vector<Aluno> lista;
+}
+
+std::vector<Aluno> AcervoAlunos::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
+    std::vector<Aluno> auxiliar;
+
+    for (auto it = alunosEncontrados.begin(); it != alunosEncontrados.end(); it++) {
+        if (categoria == "Nome" && it->getNome() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Telefone" && it->getTelefone() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Login" && it->getLogin() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Email" && it->getEmail() == item) {
+            auxiliar.push_back(*it);
+        } else if (categoria == "Matricula" && it->getMatricula() == item) {
+            auxiliar.push_back(*it);
+        }
+    }
+
+    return auxiliar;
+}
+
 std::string formatacao (Aluno& aluno) {
     std::string linha;
     linha = aluno.getNome();

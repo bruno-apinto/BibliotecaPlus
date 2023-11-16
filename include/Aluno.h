@@ -25,19 +25,7 @@ class Aluno{
     Aluno (std::string nome, std::string telefone, std::string login,
         std::string senha, std::string email, std::string matricula, bool pendencia);
     
-    /**
-     * @brief Funcao retorna um a lista de alunos procurados
-     * 
-     * @param categoria 
-     * @param item 
-     * @param alunosEncontrados 
-     * @return std::vector<Aluno> 
-     */
-    std::vector<Aluno> procurarAlunos
-            (std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados); 
-
-    std::vector<Aluno> procurarAlunos
-            (std::string categoria, std::string item);
+    
     /**
      * @brief Imprime os dados do cadastro na tela
      * 
