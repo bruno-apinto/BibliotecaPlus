@@ -82,17 +82,6 @@ public:
     bool comparar (Livro& livro);
 
     /**
-     * @brief 
-     * 
-     * @param parametro 
-     * @param item 
-     * @param livrosEncontradoss 
-     * @return livrosEncontrados vector<livros>
-     */
-    std::vector<Livro> procurarLivros 
-            (std::string parametro, std::string item, std::vector<Livro> livrosEncontrados);
-
-    /**
      * @brief Altera a situacao do livro
      * 
      * @param novoStatus 

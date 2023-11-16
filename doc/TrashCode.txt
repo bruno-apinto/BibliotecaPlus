@@ -9,3 +9,125 @@ int main()
     Aluno teste("Mateus","123", "mateusssb31",
                  "987", "teste@email", "matricula teste");
 }
+
+
+
+#include "Acervo.h"
+#include "Aluno.h"
+#include "Livro.h"
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+AcervoLivros::AcervoLivros(std::string nome, std::string telefone, std::string login, std::string senha, std::string email, std::string matricula){
+    // Inicialize os atributos da classe Acervo com os valores fornecidos no construtor.
+}
+
+void AcervoLivros::adicionarLivro(const Livro& livro) {
+    // Implemente a lógica para adicionar um livro ao acervo.
+}
+
+void AcervoLivros::removerLivro(const std::string& titulo) {
+    // Implemente a lógica para remover um livro do acervo.
+}
+
+void AcervoLivros::editarLivro(const std::string& titulo, const std::string& novoTitulo, const std::string& novoAutor, const std::string& novaEditora, const std::string& novosDetalhes) {
+    // Implemente a lógica para editar as informações de um livro no acervo.
+}
+
+std::vector<Livro> AcervoLivros::procurarLivros (std::string categoria, std::string item) {
+
+    std::vector<Livro> lista;
+    
+
+}
+
+std::vector<Livro> AcervoLivros::procurarLivros (std::string categoria, std::string item, std::vector<Livro> livrosEncontrados) {
+    
+    if (!(parametro.compare("Autor"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getAutor().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+    }
+
+    else if (!(parametro.compare("Nome"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getNome().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Editora"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getEditora().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Ano"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getAno().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("Edicao"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getEdicao().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+
+    else if (!(parametro.compare("ID"))){
+
+        std::vector<Livro> auxiliar;
+        for (auto it = livrosEncontrados.begin(); it != livrosEncontrados.end(); it++){
+        
+            if (it->getID().compare(item)){
+                auxiliar.push_back(*it);
+            }
+        }
+
+        return auxiliar;
+
+    }
+            std::vector<Livro> auxiliar;
+        return auxiliar;
+
+}
