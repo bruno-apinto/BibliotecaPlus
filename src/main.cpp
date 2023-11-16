@@ -15,7 +15,19 @@ using std::cout;
 using std::cin;
 using std::string;
 using std::vector;
+using std::endl;
 
+void verSituacaoAluno(string* ID){
+    
+}
+
+void verDadosAluno(string* ID){
+    Aluno estudante;
+    estudante = estudante.procurarAlunos("matricula", *ID);
+
+    cout << estudante.getNome() << endl << estudante.getLogin() << endl;
+    cout << estudante.getEmail << endl << estudante.getTelefone();
+}
 
 void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
 
@@ -131,26 +143,30 @@ void bibliotecario(){
 
 }
 
-void aluno(){
+void aluno(string* IDENTIFICACAO){
 
-    cout << "\n[1] - Buscar\n[2] - Ver dados\n[3] - Ver situacao\n[4] - Voltar\n\n";
-    int input = 0;
-    cin >> input;
+    int input = 10;
 
-    switch(input){
-        case 1:
-            buscarLivro(input);
-            break;
-        case 2:
-        case 3:
-        case 4:
-        default:
+    while (input){
+        cout << "\n[1] - Buscar\n[2] - Ver dados\n[3] - Ver situacao\n[4] - Voltar\n\n";
+        cin >> input;
 
+        switch(input){
+            case 1:
+                buscarLivro(input);
+                break;
+            case 2:
+                verDadosAluno(IDENTIFICACAO);
+                break;
+            case 3:
+            case 4:
+            default:
+
+        }
     }
-
 }
 
-int validation(string &login, string &senha){
+int validation(string &login, string &senha, string* ID){
     //0 - aluno cadastrado
     //1 - erro
     //2 - admin
@@ -175,13 +191,14 @@ int validation(string &login, string &senha){
                 return 1;
             }
             else {
+                *ID = lista[0].getMatricula();
                 return 0;
             }
         }
     }
 }
 
-int entrar(){
+int entrar(string* IDENTIFICACAO){
     cout << "\nInsira o login:  ";
 
     string login;
@@ -192,7 +209,7 @@ int entrar(){
     string senha;
     cin << senha;
 
-    int key = validation (login, senha);
+    int key = validation (login, senha, IDENTIFICACAO);
     return key;
 }
 
@@ -200,9 +217,11 @@ int entrar(){
 int main (){
 
     int key = 0;
+    string *IDENTIFICACAO;
+    IDENTIFICACAO = new string;
 
     while (!key) {
-        key = entrar();
+        key = entrar(IDENTIFICACAO);
     }
 
      switch (key) {
@@ -210,8 +229,8 @@ int main (){
             bibliotecario();
             break;
 
-            case 2:
-            aluno();
+            case 1:
+            aluno(IDENTIFICACAO);
             break;
 
             default:
@@ -219,5 +238,5 @@ int main (){
             break;
         }
 
-
+    delete IDENTIFICACAO;
 }
