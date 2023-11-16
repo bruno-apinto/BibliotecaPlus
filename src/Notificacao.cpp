@@ -2,6 +2,7 @@
 #include <mailio/message.hpp>
 #include <mailio/smtp.hpp>
 #include "../include/Aluno.h"
+#include <iostream>
 
 void Notificacao::notificarPendencia(const std::vector<Aluno>& alunos) {
     for (const Aluno& aluno : alunos) {
@@ -20,7 +21,14 @@ void Notificacao::enviarEmail(const std::string& destinatario) {
     msg.subject("Devolução de livro - Não responder");
     msg.content("Olá! Você possui uma pendência com a biblioteca. Para resolvê-la, devolva o livro emprestado e pague a multa. A Biblioteca Plus agradece!");
 
-    mailio::smtps conn("smtp.gmail.com", 587);
-    conn.authenticate("naoresponda.biblioteca.plus@gmail.com", "tppds2023", mailio::smtps::auth_method_t::START_TLS);
-    conn.submit(msg);
+    try {
+        mailio::smtps conn("smtp.gmail.com", 587);
+        conn.authenticate("naoresponda.biblioteca.plus@gmail.com", "tppds2023", mailio::smtps::auth_method_t::START_TLS);
+        conn.submit(msg);
+        std::cout << "E-mail enviado para: " << destinatario << std::endl;
+    } catch (const mailio::smtp_error& e) {
+        std::cerr << "Erro ao enviar e-mail: " << e.what() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Erro desconhecido: " << e.what() << std::endl;
+    }
 }
