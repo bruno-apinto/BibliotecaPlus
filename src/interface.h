@@ -19,7 +19,7 @@ using std::vector;
 using std::endl;
 
 void verSituacaoAluno(string* ID){
-
+    //Imprime a situacao do aluno perante a biblioteca
     Aluno estudante;
     estudante = estudante.procurarAlunos("matricula", *ID);
 
@@ -27,6 +27,8 @@ void verSituacaoAluno(string* ID){
 }
 
 void verDadosAluno(string* ID){
+    //Imprime os dados do aluno na biblioteca
+
     Aluno estudante;
     estudante = estudante.procurarAlunos("matricula", *ID);
 
@@ -35,6 +37,7 @@ void verDadosAluno(string* ID){
 }
 
 void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
+    //Refinamento da busca de livro por meio iterativo
 
     while (){
 
@@ -77,7 +80,7 @@ void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
 }
 
 void loopBuscarAluno(vector<Aluno> &lista, string &categoria, string &item){
-
+    //Refinamento da busca de aluno por meio iterativo
     while (){
 
         cout << "\n\nInsira a categoria:\n(nome, telefone, login, email, matricula, situacao) => ";
@@ -117,6 +120,8 @@ void loopBuscarAluno(vector<Aluno> &lista, string &categoria, string &item){
 }
 
 int buscarLivro(int &input){
+    //Imprime o vetor de livros encontrados
+
     string categoria;
     string item;
     vector<Livro> lista;
@@ -164,6 +169,8 @@ int buscarLivro(int &input){
 }
 
 vector<Aluno> buscarAluno(int &input){
+    //Imprime o vetor de alunos encontrados
+
     string categoria;
     string item;
     vector<Aluno> lista;
@@ -210,6 +217,8 @@ vector<Aluno> buscarAluno(int &input){
 }
 
 void adicionarAluno_(){
+    //Adiciona aluno ao doc Alunos.txt
+
     cout << "Complete as lacunas:\n";
     string entrada[6];
 
@@ -235,7 +244,8 @@ void adicionarAluno_(){
 }
 
 void removerAluno_(){
-    
+    //Remove aluno de Alunos.txt
+
     while(){
     cout << "Matricula do aluno:\n";
     string entrada;
@@ -256,7 +266,8 @@ void removerAluno_(){
 }
 
 void editarCadastro_(){
-    
+    //Altera o cadastro de um aluno
+
     cout << "Matricula do aluno:\n";
     string entrada;
     cin >> entrada;
@@ -274,28 +285,8 @@ void editarCadastro_(){
     
 }
 
-void editarAluno(int& input){
-    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar cadastro\n\n";
-    while(){
-            cin >> input;
-            switch (input) {
-                case 1:
-                    adicionarAluno_();
-                    break;
-                case 2:
-                    removerAluno_()
-                    break;
-                case 3:
-                    editarCadastro_();
-                    break;
-                default:
-                    cout << "Entrada errada, repita o comando\n";
-            }
-        }
-    
-}
-
 void editarLivro_(){
+    //Altera a caracteristica de um livro
     
     cout << "ID do livro:\n";
     string entrada;
@@ -315,6 +306,7 @@ void editarLivro_(){
 }
 
 void removerLivro_(){
+    //Remove o livro do Acervo
     
     while(){
         cout << "ID do livro:\n";
@@ -347,6 +339,7 @@ void removerLivro_(){
 }
 
 void adicionarLivro_(){
+    //Adiciona um livro ao acervo
 
     cout << "Características do livro:\n";
 
@@ -370,71 +363,4 @@ void adicionarLivro_(){
     AcervoLivros::adicionarLivro(book);
 
     cout << "Livro adicionadao!\n";
-}
-
-void editarAcervo(int& input){
-
-    while(input){
-        cout << "Acao:\n[1] - Adicionar livro\n[2] - Remover livro\n[3] - Editar livro\n";
-        switch(input){
-            case 1:
-                adicionarLivro_();
-                break;
-            case 2:
-                removerLivro_();
-                break;
-            case 3:
-                editarLivro_();
-                break;
-            default:
-                cout << "Entrada invalida\n";
-        }
-    }
-    
-}
-
-void bibliotecarioAluno(int& input){
-    cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar lista de alunos\n[3] - Voltar\n";
-        while(){
-            cin >> input;
-            switch (input) {
-                case 1:
-                    buscarAluno(input);
-                    break;
-                case 2:
-                    bibliotecarioLivro(input);
-                    break;
-                case 3:
-                    break;
-                default:
-                    cout << "Entrada errada\n";
-            }
-        }
-
-}
-
-void bibliotecarioLivro(int& input){
-
-    while(input){
-        cout << "Acoes:\n[1] - Procurar livro\n[2] - Editar acervo\n";
-        cout << "[3] - Emprestimos\n[4] - Voltar";
-        
-        switch(input){
-            case 1:
-                buscarLivro();
-                break;
-            case 2:
-                editarAcervo(input);
-                break;
-            case 3:
-                emprestimos(input);
-                break;
-            case 4:
-                input = 0;
-                break;
-            default:
-                cout << "Entrada invalida!\n";
-        }
-    }
-
 }

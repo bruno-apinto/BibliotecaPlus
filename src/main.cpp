@@ -19,6 +19,50 @@ using std::string;
 using std::vector;
 using std::endl;
 
+void editarAcervo(int& input){
+
+    while(input){
+        cout << "Acao:\n[1] - Adicionar livro\n[2] - Remover livro\n[3] - Editar livro\n";
+        switch(input){
+            case 1:
+                adicionarLivro_();
+                break;
+            case 2:
+                removerLivro_();
+                break;
+            case 3:
+                editarLivro_();
+                break;
+            default:
+                cout << "Entrada invalida\n";
+        }
+    }
+    
+}
+
+void editarAluno(int& input){
+    //Opcoes de acao para alterar Alunos.txt
+
+    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar cadastro\n\n";
+    while(){
+            cin >> input;
+            switch (input) {
+                case 1:
+                    adicionarAluno_();
+                    break;
+                case 2:
+                    removerAluno_()
+                    break;
+                case 3:
+                    editarCadastro_();
+                    break;
+                default:
+                    cout << "Entrada errada, repita o comando\n";
+            }
+        }
+    
+}
+
 int checagemLivro(string& categoria){
     //checa se a categoria escolhida pertence a uma das categorias de livro
 
@@ -75,6 +119,56 @@ void aluno(string* IDENTIFICACAO){
                 break;
         }
     }
+}
+
+
+void bibliotecarioAluno(int& input){
+    //Tela inicial da aba Aluno em bibliotecario()
+    
+    cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar lista de alunos\n[3] - Voltar\n";
+        while(){
+            cin >> input;
+            switch (input) {
+                case 1:
+                    buscarAluno(input);
+                    break;
+                case 2:
+                    bibliotecarioLivro(input);
+                    break;
+                case 3:
+                    break;
+                default:
+                    cout << "Entrada errada\n";
+            }
+        }
+
+}
+
+void bibliotecarioLivro(int& input){
+    //Tela inicial da aba Livro em bibliotecario
+
+    while(input){
+        cout << "Acoes:\n[1] - Procurar livro\n[2] - Editar acervo\n";
+        cout << "[3] - Emprestimos\n[4] - Voltar";
+        
+        switch(input){
+            case 1:
+                buscarLivro();
+                break;
+            case 2:
+                editarAcervo(input);
+                break;
+            case 3:
+                emprestimos(input);
+                break;
+            case 4:
+                input = 0;
+                break;
+            default:
+                cout << "Entrada invalida!\n";
+        }
+    }
+
 }
 
 void bibliotecario(){
@@ -138,7 +232,7 @@ int validation(string &login, string &senha, string* ID){
 
 int entrar(string* IDENTIFICACAO){
     //Menu de login
-    
+
     cout << "\nInsira o login:  ";
 
     string login;
