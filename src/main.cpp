@@ -343,6 +343,38 @@ void editarLivro_(){
     
 }
 
+void removerLivro_(){
+    
+    while(){
+    cout << "ID do livro:\n";
+    string entrada;
+    cin >> entrada;
+    
+    vector<Livro> lista = AcervoLivros::procurarLivros("ID", entrada);
+
+    cout << "Categoria que deseja alterar -> ";
+    cin >> entrada;
+    cout << "\nNovo parametro ->";
+    string novo;
+    cin >> novo;
+
+    cout << "Deseja deletar " << lista[0].getNome() << "?[Y/N]\n";
+    string resposta;
+    cin >> resposta;
+
+
+    if (resposta.compare("Y")){
+        AcervoLivros::editarLivro(entrada, novo, lista[0]);
+        cout << "\nLivro alterado!\n";
+        break;
+    }
+    else {
+        cout << "Operacao cancelada!\n";
+    }
+}
+    
+}
+
 void adicionarLivro_(){
 
     cout << "Características do livro:\n";
