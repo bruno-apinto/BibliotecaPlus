@@ -54,8 +54,8 @@ endif()
 add_library(mailio SHARED IMPORTED)
 
 set_target_properties(mailio PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include"
-  INTERFACE_LINK_LIBRARIES "Boost::system;Boost::date_time;Boost::regex;Boost::unit_test_framework"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr/include"
+  INTERFACE_LINK_LIBRARIES "Boost::system;Boost::date_time;Boost::regex;Boost::unit_test_framework;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

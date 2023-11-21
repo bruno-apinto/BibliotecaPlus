@@ -6,6 +6,7 @@
 #include "../include/Situacao.h"
 // #include "../include/AcervoAlunos.h"
 // #include "../include/Notificacao.h"
+// #include "../include/AcervoAlunos.h"
 #include <iostream>
 #include <vector>
 
@@ -38,3 +39,27 @@ TEST_CASE("Teste de Alunos") {
     // not.notificarPendencia(alunos);
 
 }
+// TEST_CASE("Testes notificaçâo")
+// {
+//     Notificacao teste;
+//     Aluno Ateste("Mateus", "123123", "Login", "Senha", "samira.mansurc@gmail.com", "Matricula", true);
+//     std::vector<Aluno> alunos;
+//     alunos.push_back(Ateste);
+//     teste.notificarPendencia(alunos);
+
+
+// }
+
+// TEST_CASE("TESTE ACERVOS")
+// {
+//     Aluno teste("Mateus", "123123", "Login", "Senha", "samira.mansurc@gmail.com", "Matricula", true);
+//     Aluno teste2("Mateus2", "123123", "Login", "Senha", "mateussb31@yahoo.com.br", "Matricula", true);
+//     Aluno teste3("Mateus3", "123123", "Login", "Senha", "cris.samiramansur@gmail.com", "Matricula", false);
+    
+//     AcervoAlunos acervo;
+//     acervo.adicionarAluno(teste);
+//     acervo.adicionarAluno(teste2);
+//     acervo.adicionarAluno(teste3);
+// }
+
+

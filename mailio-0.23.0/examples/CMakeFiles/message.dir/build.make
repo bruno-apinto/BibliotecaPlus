@@ -97,6 +97,8 @@ examples/message: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 examples/message: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.74.0
 examples/message: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
 examples/message: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0
+examples/message: /usr/lib/x86_64-linux-gnu/libssl.so
+examples/message: /usr/lib/x86_64-linux-gnu/libcrypto.so
 examples/message: examples/CMakeFiles/message.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/TP-main/mailio-0.23.0/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable message"
 	cd /home/TP-main/mailio-0.23.0/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/message.dir/link.txt --verbose=$(VERBOSE)

@@ -1,12 +1,14 @@
 #include "../include/Notificacao.h"
 #include <mailio/message.hpp>
+// #include "../mailio-0.23.0/include/mailio/message.hpp"
+// #include "../mailio-0.23.0/include/mailio/smtp.hpp"
 #include <mailio/smtp.hpp>
 #include "../include/Aluno.h"
 #include <iostream>
 
-void Notificacao::notificarPendencia(const std::vector<Aluno>& alunos) {
+void Notificacao::notificarPendencia(std::vector<Aluno> alunos) {
     for (const Aluno& aluno : alunos) {
-        if (aluno.getSituacao().getSituacao()) {
+        if (true) {
             enviarEmail(aluno.getEmail());
         }
     }

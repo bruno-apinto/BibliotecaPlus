@@ -304,6 +304,8 @@ libmailio.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 libmailio.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.74.0
 libmailio.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
 libmailio.so: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0
+libmailio.so: /usr/lib/x86_64-linux-gnu/libssl.so
+libmailio.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libmailio.so: CMakeFiles/mailio.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/TP-main/mailio-0.23.0/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libmailio.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mailio.dir/link.txt --verbose=$(VERBOSE)

@@ -10,7 +10,7 @@ class Aluno{
      * @brief Construtor padrão
      * 
      */
-    Aluno (): Aluno("A", "B", "C", "D", "E", "F", false);
+    // Aluno (): Aluno("A", "B", "C", "D", "E", "F", false);
 
     /**
      * @brief Construtor de Aluno
