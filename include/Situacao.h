@@ -12,8 +12,7 @@ public:
     void setSituacao(bool pendencia); //altera se ha pendencia ou nao
     const std::vector<std::string>& getLivrosEmprestados() const;
     int calcularMulta(const std::chrono::system_clock::time_point& dataDevolucao);
-    void setEmprestimo;
-
+    void addLivro (std::string& adicionar); // adiciona o livro na lista de livros emprestados
 private:
     bool pendencia_; // atributo booleano que indica se existe pendência ou não
     int multa_; // valor da multa a ser paga

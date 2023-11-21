@@ -35,3 +35,7 @@ int Situacao::calcularMulta(const std::chrono::system_clock::time_point& dataDev
 const std::vector<std::string>& Situacao::getLivrosEmprestados() const {
     return livrosEmprestados_;
 }
+
+void Situcao::addLivro (std::string adicionar){
+    livrosEmprestados_.push_back(adicionar);
+}

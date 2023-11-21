@@ -185,7 +185,7 @@ int buscarLivro(int &input){
     return 0;
 }
 
-int buscarAluno(int &input){
+vector<Aluno> buscarAluno(int &input){
     string categoria;
     string item;
     vector<Aluno> lista;
@@ -235,10 +235,10 @@ int buscarAluno(int &input){
         loopBuscarAluno(lista, categoria, item);
     }
 
-    return 0;
+    return lista;
 }
 
-void adicionarAluno_(int& input){
+void adicionarAluno_(){
     cout << "Complete as lacunas:\n";
     string entrada[6];
 
@@ -256,19 +256,62 @@ void adicionarAluno_(int& input){
     cin >> entrada[5];
     Situacao entradaS;
     
+    Aluno estudante(entrada[0], entrada[1], entrada[2], entrada[3],
+            entrada[4], entrada[5], entradaS);
+    AcervoAlunos::adicionarAluno(estudante);
+
+    cout << "Aluno adicionadao!\n";
+}
+
+void removerAluno_(){
     
+    while(){
+    cout << "Matricula do aluno:\n";
+    string entrada;
+    cin >> entrada;
+    
+    vector<Aluno> lista = AcervoAlunos::procurarAlunos("Matricula", entrada);
+
+    cout << "Deseja deletar " << lista[0].getNome() << "?\n[Y/N]\n";
+    cin >> entrada;
+
+    if (entrada.compare("Y")) 
+        AcervoAlunos::removerAluno(lista[0]);
+    else
+        cout << "Operacao cancelada!\n";
+    
+    }
+
+}
+
+void editarCadastro_(){
+    while(){
+    cout << "Matricula do aluno:\n";
+    string entrada;
+    cin >> entrada;
+    
+    vector<Aluno> lista = AcervoAlunos::procurarAlunos("Matricula", entrada);
+
+    cout << "Categoria que deseja alterar -> ";
+    cin >> entrada;
+    cout << "\nNovo parametro ->";
+    string novo;
+    cin >> novo;
+
+    AcervoAlunos::editarAluno(entrada, novo, lista[0]);
+    cout << "\nCadastro alterado!\n";
 }
 
 void editarAluno(int& input){
-    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar aluno\n\n";
+    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar cadastro\n\n";
     while(){
             cin >> input;
             switch (input) {
                 case 1:
-                    
+                    adicionarAluno_();
                     break;
                 case 2:
-                    
+                    removerAluno_()
                     break;
                 case 3:
                     break;
