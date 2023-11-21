@@ -21,6 +21,7 @@ using std::endl;
 
 int checagemLivro(string& categoria){
     //checa se a categoria escolhida pertence a uma das categorias de livro
+
     categoriaLivro checar = 0;
     for (int a = 0; a<6; a++){
         if (a = 6) {
@@ -35,6 +36,7 @@ int checagemLivro(string& categoria){
 
 int checagemAluno(string& categoria){
     //checa se a categoria escolhida pertence a uma das categorias de aluno
+
     categoriaAluno checar = 0;
     for (int a = 0; a<6; a++){
         if (a = 6) {
@@ -48,6 +50,7 @@ int checagemAluno(string& categoria){
 }
 
 void aluno(string* IDENTIFICACAO){
+    //Tela Inicial do menu aluno
 
     int input = 10;
 
@@ -75,6 +78,8 @@ void aluno(string* IDENTIFICACAO){
 }
 
 void bibliotecario(){
+    // Tela inicial do bibliotecario
+
     cout << "Aba:\n[1] - Alunos\n[2] - Livros\n[3] - Voltar\n";
 
     int input;
@@ -99,6 +104,7 @@ void bibliotecario(){
 }
 
 int validation(string &login, string &senha, string* ID){
+    //Valida login e senha
     //0 - aluno cadastrado
     //1 - erro
     //2 - admin
@@ -131,6 +137,8 @@ int validation(string &login, string &senha, string* ID){
 }
 
 int entrar(string* IDENTIFICACAO){
+    //Menu de login
+    
     cout << "\nInsira o login:  ";
 
     string login;
