@@ -10,6 +10,7 @@
 #include <vector>
 
 enum categoriaLivro{nome, autor, ano, edicao, editora, ID};
+enum categoriaAluno{nome, telefone, login, email, matricula, situacao};
 
 using std::cout;
 using std::cin;
@@ -53,7 +54,7 @@ void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
         cout << "Insira o termo que deseja pesquisar: \n";
         cin >> item;
 
-        lista = Livro::procurarLivros(categoria, item);
+        lista = AcervoAlunos::procurarLivros(categoria, item);
 
         if (lista.empty()){
             cout << "Nao existe nenhum livro com essa caracteristica\n";
@@ -66,6 +67,55 @@ void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
                 cout << it->getEditora << " ";
                 cout << it->getAno << " ";
                 cout << it->getID << std::endl;
+            }
+        }
+
+        cout << "\n[1] - Refinar\n[2] - Finalizar\n";
+        cin >> input;
+
+        if (input != 1 && input != 2) {
+            cout << "entrada invalida\n"
+        }
+        else if (input == 2){
+            break;
+        }
+
+    }
+}
+
+void loopBuscarAluno(vector<Aluno> &lista, string &categoria, string &item){
+
+    while (){
+
+        cout << "\n\nInsira a categoria:\n(nome, telefone, login, email, matricula, situacao) => ";
+        cin >> categoria;
+
+        categoriaAluno checar = 0;
+        for (int a = 0; a<6; a++){
+            if (a = 6) {
+                cout << "erro na categoria\n";
+                return 1;
+            }
+            checar = a;
+            if (!categoria.compare(checar)) break;
+        }
+
+        cout << "Insira o termo que deseja pesquisar: \n";
+        cin >> item;
+
+        lista = AcervoAlunos::procurarAlunos(categoria, item);
+
+        if (lista.empty()){
+            cout << "Nao existe nenhum livro com essa caracteristica\n";
+        }
+        else {
+            for (auto it = lista.begin(); it != lista.end(); it++){
+                cout << it->getNome << " ";
+                cout << it->getTelefone << " ";
+                cout << it->getLogin << " ";
+                cout << it->getEmail << " ";
+                cout << it->getMatricula << " ";
+                cout << it->getSituacao << std::endl;
             }
         }
 
@@ -103,7 +153,7 @@ int buscarLivro(int &input){
     cout << "Insira o termo que deseja pesquisar: \n";
     cin >> item;
 
-    lista = Livro::procurarLivros(categoria, item);
+    lista = AcervoLivros::procurarLivros(categoria, item);
 
     if (lista.empty()){
         cout << "Nao existe nenhum livro com essa caracteristica\n";
@@ -135,15 +185,104 @@ int buscarLivro(int &input){
     return 0;
 }
 
-void bibliotecarioAluno(){
+int buscarAluno(int &input){
+    string categoria;
+    string item;
+    vector<Aluno> lista;
+
+    cout << "\n\nInsira a categoria:\n(nome, telefone, login, email, matricula, situacao) => ";
+    cin >> categoria;
+
+    categoriaAluno checar = 0;
+    for (int a = 0; a<6; a++){
+        if (a = 6) {
+            cout << "erro na categoria\n";
+            return 1;
+        }
+        checar = a;
+        if (!categoria.compare(checar)) break;
+    }
+
+    cout << "Insira o termo que deseja pesquisar: \n";
+    cin >> item;
+
+    lista = AcervoAlunos::procurarAlunos(categoria, item);
+
+    if (lista.empty()){
+        cout << "Nao existe nenhum livro com essa caracteristica\n";
+    }
+    else {
+        for (auto it = lista.begin(); it != lista.end(); it++){
+            cout << it->getNome << " ";
+            cout << it->getTelefone << " ";
+            cout << it->getLogin << " ";
+            cout << it->getEmail << " ";
+            cout << it->getSituacao << " ";
+            cout << it->getMatricula << endl;
+        }
+    }
+
+    cout << "\n[1] - Refinar\n[2] - Finalizar\n";
+    cin >> input;
+
+    if (input != 1 && input != 2) {
+        cout << "entrada invalida\n"
+    }
+    else if (input == 2){
+        return 0;
+    }
+    else{
+        loopBuscarAluno(lista, categoria, item);
+    }
+
+    return 0;
+}
+
+void bibliotecarioAluno(int& input){
+    cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar aluno\n[3] - Voltar\n";
+        while(){
+            cin >> input;
+            switch (input) {
+                case 1:
+                    buscarAluno(input)
+                    break;
+                case 2:
+                    bibliotecarioLivro(input);
+                    break;
+                case 3:
+                    break;
+                default:
+                    cout << "Entrada errada\n";
+                }
+            }
 
 }
 
-void bibliotecarioLivro(){
+void bibliotecarioLivro(int& input){
 
 }
 
 void bibliotecario(){
+    cout << "Aba:\n[1] - Alunos\n[2] - Livros\n[3] - Voltar\n";
+
+    int input;
+    while(){
+        cin >> input;
+        switch (input) {
+            case 1:
+                bibliotecarioAluno(input);
+                input = 0;
+                break;
+            case 2:
+                bibliotecarioLivro(input);
+                input = 0;
+                break;
+            case 3:
+                break;
+            default:
+                cout << "Entrada errada\n";
+        }
+    }
 
 }
 
