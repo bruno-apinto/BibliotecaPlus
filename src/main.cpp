@@ -238,13 +238,42 @@ int buscarAluno(int &input){
     return 0;
 }
 
+void adicionarAluno_(int& input){
+    cout << "Complete as lacunas:\n";
+    string entrada;
+    Aluno adicionar_;
+
+    cout << "Nome -> ";
+    cin >> 
+}
+
+void editarAluno(int& input){
+    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar aluno\n\n";
+    while(){
+            cin >> input;
+            switch (input) {
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    break;
+                default:
+                    cout << "Entrada errada, repita o comando\n";
+            }
+        }
+    
+}
+
 void bibliotecarioAluno(int& input){
-    cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar aluno\n[3] - Voltar\n";
+    cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar lista de alunos\n[3] - Voltar\n";
         while(){
             cin >> input;
             switch (input) {
                 case 1:
-                    buscarAluno(input)
+                    buscarAluno(input);
                     break;
                 case 2:
                     bibliotecarioLivro(input);
@@ -253,8 +282,8 @@ void bibliotecarioAluno(int& input){
                     break;
                 default:
                     cout << "Entrada errada\n";
-                }
             }
+        }
 
 }
 
@@ -359,7 +388,6 @@ int entrar(string* IDENTIFICACAO){
     int key = validation (login, senha, IDENTIFICACAO);
     return key;
 }
-
 
 int main (){
 
