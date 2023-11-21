@@ -240,11 +240,23 @@ int buscarAluno(int &input){
 
 void adicionarAluno_(int& input){
     cout << "Complete as lacunas:\n";
-    string entrada;
-    Aluno adicionar_;
+    string entrada[6];
 
     cout << "Nome -> ";
-    cin >> 
+    cin >> entrada[0];
+    cout << "\nTelefone -> ";
+    cin >> entrada[1];
+    cout << "\nLogin -> ";
+    cin >> entrada[2];
+    cout << "\nSenha -> ";
+    cin >> entrada[3];
+    cout << "\nEmail -> ";
+    cin >> entrada[4];
+    cout << "Matricula -> ";
+    cin >> entrada[5];
+    Situacao entradaS;
+    
+    
 }
 
 void editarAluno(int& input){
