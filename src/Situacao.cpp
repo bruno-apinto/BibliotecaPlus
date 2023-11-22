@@ -36,6 +36,10 @@ const std::vector<std::string>& Situacao::getLivrosEmprestados() const {
     return livrosEmprestados_;
 }
 
-void Situcao::addLivro (std::string adicionar){
+void Situacao::addLivro (std::string& adicionar){
     livrosEmprestados_.push_back(adicionar);
+}
+
+int Situacao::getMulta(){
+    return multa_;
 }

@@ -152,6 +152,25 @@ void receber(int& input, string& ID){
     vector<Aluno> lista = AcervoAlunos::procurarAlunos("matricula", entrada);
 
     cout << endl << lista[0].getSituacao() << endl;
+    cout << "Multa a pagar R$ " << lista[0].getSituacao().getMulta() << endl;
+    
+    cout << "Multa quitada?[Y/N]\n";
+    cin >> entrada;
+
+    if (entrada.compare("Y")){
+
+        vector<string> nomes;
+        nomes = lista[0].getSituacao().getLivrosEmprestados();
+        
+        vector<Livro> livros;
+
+        for(auto it = nomes.begin(), int a = 0; it != nomes.end(); it++, a++){
+            livros.push_back(AcervoLivros::procurarLivros("ID", nomes[a]));
+            
+        }
+
+        lista[0].getSituacao().setSituacao(false);
+    }
     
     
 }
