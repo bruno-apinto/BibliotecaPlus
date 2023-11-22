@@ -1,0 +1,9 @@
+{matricula | pendencia | multa |} 
+<TAB>   {lista de livros $}
+
+2023038965 false 0
+    Calculo 3 $
+    Joao Pe de Feijao $
+20239876 true 45
+    Leonardo da Vinci: Preposicoes $
+
