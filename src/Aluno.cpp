@@ -1,8 +1,6 @@
-// #include "../include/Livro.h"
-#include "../include/Aluno.h"
+#include "include/Aluno.h"
 #include <iostream>
-#include "../include/Situacao.h"
-// #include "Aluno.h"
+#include "include/Situacao.h"
 
 // Aluno::Aluno() {}
 

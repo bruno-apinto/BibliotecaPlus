@@ -144,6 +144,51 @@ void bibliotecarioAluno(int& input){
 
 }
 
+void receber(int& input, string& ID){
+    cout << "Qual a matricula do aluno?\n";
+    string entrada;
+    cin >> entrada;
+
+    vector<Aluno> lista = AcervoAlunos::procurarAlunos("matricula", entrada);
+
+    cout << endl << lista[0].getSituacao() << endl;
+    
+    
+}
+
+void emprestimos(int& input){
+    cout << "ID ->\n";
+    string entrada;
+    cin >> entrada;
+    
+    vector<Livro> lista = AcervoLivros::procurarLivros("ID", entrada);
+    cout << "Situacao do livro: " << lista[0].getStatus();
+
+    cout << "O que deseja fazer?\n";
+    cout << "[1] - Receber\n[2] - Voltar\n";
+    if (lista[0].getStatus().compare("Disponivel")){
+        cout << "[3] - Emprestar\n";
+    }
+
+    while(input){
+        switch(input){
+        case 1:
+            receber(input, entrada);
+            break;
+        case 3:
+            if(lista[0].getStatus().compare("Disponivel")){
+                emprestar();
+            }
+            break;
+        case 2:
+            input = 0;
+            break;
+        default:
+            cout << "Entrada invalida!\n";
+        }
+    }
+}
+
 void bibliotecarioLivro(int& input){
     //Tela inicial da aba Livro em bibliotecario
 

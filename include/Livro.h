@@ -4,17 +4,6 @@
 #include <string>
 #include <vector>
 
-/**
- * @brief Indica o status do livro
- * 
- */
-enum status {
-    Disponivel,
-    Emprestado,
-    Atrasado,
-    Perdido
-};
-
 class Livro {
 public:
 
