@@ -144,6 +144,8 @@ void bibliotecarioAluno(int& input){
 
 }
 
+
+
 void receber(int& input, string& ID){
     cout << "Qual a matricula do aluno?\n";
     string entrada;
@@ -157,21 +159,22 @@ void receber(int& input, string& ID){
     cout << "Multa quitada?[Y/N]\n";
     cin >> entrada;
 
-    if (entrada.compare("Y")){
-
+    if (entrada.compare("N")){
+        cout << "Dívida nao quitada\n";
+    }
+    else {
         vector<string> nomes;
         nomes = lista[0].getSituacao().getLivrosEmprestados();
+        Livro livro_;
         
-        vector<Livro> livros;
-
         for(auto it = nomes.begin(), int a = 0; it != nomes.end(); it++, a++){
-            livros.push_back(AcervoLivros::procurarLivros("ID", nomes[a]));
-            
+                livro_ = AcervoLivros::procurarLivros("ID", nomes[a]);
+                livro_.setStatus();
         }
 
         lista[0].getSituacao().setSituacao(false);
+        cout << "Divida quitada e livro devolvido!\n";
     }
-    
     
 }
 
