@@ -144,22 +144,57 @@ void bibliotecarioAluno(int& input){
 
 }
 
+char multa(Aluno& aluno){
+    //retorna se há multa ou nao a pagar
+    
+    cout << endl << aluno.getSituacao() << endl;
+    cout << "Multa a pagar R$ " << aluno.getSituacao().getMulta() << endl;
+    
+    cout << "Multa quitada?[Y/N]\n";
+    char entrada;
 
+    if (aluno.getSituacao().getMulta() == 0){
+        entrada = 'Y';
+        cout << "Y\n";
+        return entrada;
+    }
+    else 
+        cin >> entrada;
 
-void receber(int& input, string& ID){
+    return entrada;
+}
+
+void emprestar(Livro& book){
+    //empresta um livro ao aluno
+    //PRE-CONDICAO: livro estar disponivel no acervo
+
     cout << "Qual a matricula do aluno?\n";
     string entrada;
     cin >> entrada;
 
     vector<Aluno> lista = AcervoAlunos::procurarAlunos("matricula", entrada);
 
-    cout << endl << lista[0].getSituacao() << endl;
-    cout << "Multa a pagar R$ " << lista[0].getSituacao().getMulta() << endl;
-    
-    cout << "Multa quitada?[Y/N]\n";
+    char valid = multa(lista[0]);
+
+    string data = "00000"; //alterar data pra biblioteca chrono
+
+    if (valid == 'Y'){
+        book.setStatus(true);
+        book.setDataEmprestimo(data);
+    }
+}
+
+void receber(int& input){
+    //recebe o livro e quita a divida ou nao do aluno
+    cout << "Qual a matricula do aluno?\n";
+    string entrada;
     cin >> entrada;
 
-    if (entrada.compare("N")){
+    vector<Aluno> lista = AcervoAlunos::procurarAlunos("matricula", entrada);
+
+    char valid = multa(lista[0]);
+
+    if (valid == 'N'){
         cout << "Dívida nao quitada\n";
     }
     else {
@@ -195,11 +230,11 @@ void emprestimos(int& input){
     while(input){
         switch(input){
         case 1:
-            receber(input, entrada);
+            receber(input);
             break;
         case 3:
             if(lista[0].getStatus().compare("Disponivel")){
-                emprestar();
+                emprestar(lista[0]);
             }
             break;
         case 2:

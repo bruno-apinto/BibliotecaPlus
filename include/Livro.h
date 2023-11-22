@@ -77,6 +77,8 @@ public:
      */
     void setStatus();
 
+    void setDataEmprestimo(string& data);
+
 
 private:
 
