@@ -56,12 +56,12 @@ void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
             }
             else {
                 for (auto it = lista.begin(); it != lista.end(); it++){
-                    cout << it->getNome << " ";
-                    cout << it->getAutor << " ";
-                    cout << it->getEdicao << " ";
-                    cout << it->getEditora << " ";
-                    cout << it->getAno << " ";
-                    cout << it->getID << std::endl;
+                    cout << it->getNome() << " ";
+                    cout << it->getAutor() << " ";
+                    cout << it->getEdicao() << " ";
+                    cout << it->getEditora() << " ";
+                    cout << it->getAno() << " ";
+                    cout << it->getID() << std::endl;
                 }
             }
 
@@ -69,7 +69,7 @@ void loopBuscarLivro(vector<Livro> &lista, string &categoria, string &item){
             cin >> input;
 
             if (input != 1 && input != 2) {
-                cout << "entrada invalida\n"
+                cout << "entrada invalida\n";
             }
             else if (input == 2){
                 break;
@@ -97,12 +97,12 @@ void loopBuscarAluno(vector<Aluno> &lista, string &categoria, string &item){
             }
             else {
                 for (auto it = lista.begin(); it != lista.end(); it++){
-                    cout << it->getNome << " ";
-                    cout << it->getTelefone << " ";
-                    cout << it->getLogin << " ";
-                    cout << it->getEmail << " ";
-                    cout << it->getMatricula << " ";
-                    cout << it->getSituacao << std::endl;
+                    cout << it->getNome() << " ";
+                    cout << it->getTelefone() << " ";
+                    cout << it->getLogin() << " ";
+                    cout << it->getEmail() << " ";
+                    cout << it->getMatricula() << " ";
+                    cout << it->getSituacao() << std::endl;
                 }
             }
 

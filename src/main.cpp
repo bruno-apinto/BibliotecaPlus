@@ -146,7 +146,7 @@ void bibliotecarioAluno(int& input){
 
 char multa(Aluno& aluno){
     //retorna se há multa ou nao a pagar
-    
+    k
     cout << endl << aluno.getSituacao() << endl;
     cout << "Multa a pagar R$ " << aluno.getSituacao().getMulta() << endl;
     
