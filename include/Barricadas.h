@@ -1,31 +1,20 @@
-#ifndef BARRICADAS_H
-#define BARRICADAS_H
+#ifndef BARRICADAS_ENTRADAS_H
+#define BARRICADAS_ENTRADAS_H
 
 #include <stdexcept>
 #include <string>
 
-class Barricadas {
+class BarricadasEntradas {
 public:
-    // Construtor da barricada
-    BarricadaNome(const std::string& mensagem);
-
-    // Função para ativar a barricada com um nome específico
-    void ativar(const std::string& nome);
-
-     // Construtor da barricada para data
-    BarricadaData(const std::string& mensagem);
-
-    // Função para ativar a barricada com uma data específica
-    void ativar(const std::string& data);
-
- // Construtor da barricada para e-mail
-    BarricadaEmail(const std::string& mensagem);
-
-    // Função para ativar a barricada com um endereço de e-mail específico
-    void ativar(const std::string& email);
+    static void validarNome(const std::string& nome);
+    static void validarTelefone(const std::string& telefone);
+    static void validarEmail(const std::string& email);
+    static void validarMatricula(const std::string& matricula);
+    static void validarCategoriaLivro(const std::string& categoria);
+    static void validarCategoriaAluno(const std::string& categoria);
 
 private:
-    std::string mensagemErro;
+    static void validarStringNaoVazia(const std::string& valor, const std::string& mensagemErro);
 };
 
-#endif // BARRICADAS
+#endif // BARRICADAS_ENTRADAS_H
