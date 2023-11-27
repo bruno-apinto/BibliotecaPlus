@@ -22,7 +22,7 @@ using std::endl;
 void editarAcervo(int& input){
 
     while(input){
-        cout << "Acao:\n[1] - Adicionar livro\n[2] - Remover livro\n[3] - Editar livro\n";
+        cout << "Acao:\n[1] - Adicionar livro\n[2] - Remover livro\n[3] - Editar livro\n[4] - Voltar\n";
         switch(input){
             case 1:
                 adicionarLivro_();
@@ -32,6 +32,9 @@ void editarAcervo(int& input){
                 break;
             case 3:
                 editarLivro_();
+                break;
+            case 4:
+                input = 0;
                 break;
             default:
                 cout << "Entrada invalida\n";
@@ -43,8 +46,8 @@ void editarAcervo(int& input){
 void editarAluno(int& input){
     //Opcoes de acao para alterar Alunos.txt
 
-    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar cadastro\n\n";
-    while(){
+    cout << "\n[1] - Adicionar aluno\n[2] - Remover aluno\n[3] - Editar cadastro\n[4] - Voltar\n";
+    while(input){
             cin >> input;
             switch (input) {
                 case 1:
@@ -55,6 +58,9 @@ void editarAluno(int& input){
                     break;
                 case 3:
                     editarCadastro_();
+                    break;
+                case 4:
+                    input = 0;
                     break;
                 default:
                     cout << "Entrada errada, repita o comando\n";
@@ -112,7 +118,7 @@ void aluno(string* IDENTIFICACAO){
             case 3:
                 verSituacaoAluno(IDENTIFICACAO);
             case 4:
-                return 0;
+                input = 0;
                 break;
             default:
                 cout << "acao invalida\n";
@@ -126,7 +132,7 @@ void bibliotecarioAluno(int& input){
     //Tela inicial da aba Aluno em bibliotecario()
     
     cout << "Ações:\n[1] - Procurar Aluno\n[2] - Editar lista de alunos\n[3] - Voltar\n";
-        while(){
+        while(input){
             cin >> input;
             switch (input) {
                 case 1:
@@ -136,6 +142,7 @@ void bibliotecarioAluno(int& input){
                     bibliotecarioLivro(input);
                     break;
                 case 3:
+                    input = 0;
                     break;
                 default:
                     cout << "Entrada errada\n";
@@ -146,8 +153,8 @@ void bibliotecarioAluno(int& input){
 
 char multa(Aluno& aluno){
     //retorna se há multa ou nao a pagar
-    k
-    cout << endl << aluno.getSituacao() << endl;
+    
+    cout << "\n" << aluno.getSituacao() << endl;
     cout << "Multa a pagar R$ " << aluno.getSituacao().getMulta() << endl;
     
     cout << "Multa quitada?[Y/N]\n";
@@ -275,22 +282,21 @@ void bibliotecarioLivro(int& input){
 
 void bibliotecario(){
     // Tela inicial do bibliotecario
-
+    while(){
     cout << "Aba:\n[1] - Alunos\n[2] - Livros\n[3] - Voltar\n";
 
     int input;
-    while(){
+    
         cin >> input;
         switch (input) {
             case 1:
                 bibliotecarioAluno(input);
-                input = 0;
                 break;
             case 2:
-                bibliotecarioLivro(input);
-                input = 0;
+                bibliotecarioLivro(input);  
                 break;
             case 3:
+                input = 0;
                 break;
             default:
                 cout << "Entrada errada\n";
