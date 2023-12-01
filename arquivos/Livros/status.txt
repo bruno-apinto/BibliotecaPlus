@@ -1,4 +1,4 @@
-{ID | Emprestimo (DDMMAAAA) | Status}
+{FORMATACAO: ID | Emprestimo (DDMMAAAA) | Status |}
 
 000001 | 12042023 | Perdido |
 000002 | 08082023 | Regular |
