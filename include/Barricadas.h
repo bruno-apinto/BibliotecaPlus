@@ -6,6 +6,9 @@
 
 class BarricadasEntradas {
 public:
+    
+    //valida as entradas da main.cpp
+
     static void validarNome(const std::string& nome);
     static void validarTelefone(const std::string& telefone);
     static void validarEmail(const std::string& email);

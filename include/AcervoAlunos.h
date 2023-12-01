@@ -34,7 +34,7 @@ void removerAluno(Aluno& aluno);
 void adicionarAluno(Aluno& aluno);
 
 /**
-     * @brief Funcao retorna um a lista de alunos procurados
+     * @brief Procura alunos dentro de um vetor de alunos
      * 
      * @param categoria 
      * @param item 
@@ -44,6 +44,13 @@ void adicionarAluno(Aluno& aluno);
     std::vector<Aluno> procurarAlunos
             (std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados); 
 
+        /**
+         * @brief Procura alunos no arquivo Aluno.txt
+         * 
+         * @param categoria 
+         * @param item 
+         * @return std::vector<Aluno> 
+         */
     std::vector<Aluno> procurarAlunos
             (std::string categoria, std::string item);
 

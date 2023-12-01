@@ -7,6 +7,16 @@
 class Livro {
 public:
 
+    /**
+     * @brief Construtor de Livro
+     * 
+     * @param nome 
+     * @param autor 
+     * @param ano 
+     * @param edicao 
+     * @param editora 
+     * @param ID 
+     */
     Livro (std::string nome, std::string autor, std::string ano, 
         std::string edicao, std::string editora, std::string ID);
 
