@@ -9,8 +9,8 @@
 #include <string>
 #include <vector>
 
-enum categoriaLivro{nome, autor, ano, edicao, editora, ID};
-enum categoriaAluno{nome, telefone, login, email, matricula, situacao};
+enum categoriaLivro{nome, autor, ano, edicao, editora, ID}; //enum das categorias de livro
+enum categoriaAluno{nome, telefone, login, email, matricula, situacao}; //enum das categoria de aluno
 
 using std::cout;
 using std::cin;

@@ -20,8 +20,10 @@ using std::vector;
 using std::endl;
 
 void editarAcervo(int& input){
+    //opcoes para alterar o acervo
 
     while(input){
+
         cout << "Acao:\n[1] - Adicionar livro\n[2] - Remover livro\n[3] - Editar livro\n[4] - Voltar\n";
         switch(input){
             case 1:
@@ -193,6 +195,7 @@ void emprestar(Livro& book){
 
 void receber(int& input){
     //recebe o livro e quita a divida ou nao do aluno
+
     cout << "Qual a matricula do aluno?\n";
     string entrada;
     cin >> entrada;
@@ -221,6 +224,8 @@ void receber(int& input){
 }
 
 void emprestimos(int& input){
+    //Interface da aba emprestimos
+
     cout << "ID ->\n";
     string entrada;
     cin >> entrada;

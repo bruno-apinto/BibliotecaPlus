@@ -3,22 +3,6 @@
 #include <string>
 #include <vector>
 
-/**
- * @brief Construtor de Livro(vazio)
- * 
- */
-// Livro::Livro() : Livro::Livro("A", "B", "C", "D", "F", "G", "H") {}
-
-/**
- * @brief Construct a new Livro:: Livro object
- * 
- * @param nome 
- * @param autor 
- * @param ano 
- * @param edicao 
- * @param editora 
- * @param ID
- */
 Livro::Livro(std::string nome, std::string autor, std::string ano,
     std::string edicao, std::string editora, std::string ID) : nome_(nome), autor_(autor), ano_(ano),
         edicao_(edicao), editora_(editora), ID_(ID), status_("teste") {}

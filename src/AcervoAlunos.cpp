@@ -9,7 +9,7 @@
 AcervoAlunos::AcervoAlunos() {}
 
 std::vector<Aluno> AcervoAlunos::procurarAlunos(std::string categoria, std::string item){
-    std::vector<Aluno> lista;
+    std::vector<Aluno> lista; 
 }
 
 std::vector<Aluno> AcervoAlunos::procurarAlunos(std::string categoria, std::string item, std::vector<Aluno> alunosEncontrados) {
@@ -33,6 +33,8 @@ std::vector<Aluno> AcervoAlunos::procurarAlunos(std::string categoria, std::stri
 }
 
 std::string formatacao (Aluno& aluno) {
+    //formata a organizacao dos dados do arquivo
+
     std::string linha;
     linha = aluno.getNome();
     linha += " | " + aluno.getLogin();
@@ -44,6 +46,7 @@ std::string formatacao (Aluno& aluno) {
 }
 
 void AcervoAlunos::adicionarAluno(Aluno& aluno) {
+
    std::ofstream adicionar ("arquivos/Alunos/alunos.txt", std::ios::app);
    std::string linha;
    
@@ -54,6 +57,7 @@ void AcervoAlunos::adicionarAluno(Aluno& aluno) {
 }
 
 void AcervoAlunos::removerAluno(Aluno& aluno) {
+
     std::ifstream leitura ("arquivos/Alunos/alunos.txt");
 
     std::string excluir = formatacao(aluno);
@@ -80,7 +84,7 @@ void AcervoAlunos::editarAluno(std::string categoria, std::string novoDado, Alun
 
     Aluno novoAluno;
     
-    switch (categoria){
+    switch (categoria){ //destina à catgeoria escolhida na entrada
         case "Nome":
             
                 novoAluno (novoDado, aluno.getTelefone(), aluno.getLogin(),
