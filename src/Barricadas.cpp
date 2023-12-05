@@ -24,13 +24,15 @@ void BarricadasEntradas::validarMatricula(const std::string& matricula) {
 }
 
 void BarricadasEntradas::validarCategoriaLivro(const std::string& categoria) {
-    // Adicione aqui lógica de validação para categoria de livro, se necessário
-    validarStringNaoVazia(categoria, "Categoria de livro inválida");
+   if (categoria < nome || categoria > ID) {
+        throw std::out_of_range("Categoria de livro inválida");
+    }
 }
 
 void BarricadasEntradas::validarCategoriaAluno(const std::string& categoria) {
-    // Adicione aqui lógica de validação para categoria de aluno, se necessário
-    validarStringNaoVazia(categoria, "Categoria de aluno inválida");
+    if (categoria < nome || categoria > situacao) {
+        throw std::out_of_range("Categoria de aluno inválida");
+    }
 }
 
 void BarricadasEntradas::validarStringNaoVazia(const std::string& valor, const std::string& mensagemErro) {
