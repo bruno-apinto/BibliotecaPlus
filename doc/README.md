@@ -127,6 +127,15 @@ Métodos:
     - string getLivrosEmprestados: exibe a lista de livros emprestados em nome do aluno.
     - Situacao::Situacao: construtor de situacao.
 
+Classe Barricadas:
+
+Métodos:
+    - validarNome(const std::string& nome): Valida um nome.
+    - validarTelefone(const std::string& telefone): Valida um número de telefone.
+    - validarEmail(const std::string& email): Valida um endereço de email.
+    - validarMatricula(const std::string& matricula): Valida uma matrícula.
+    - validarCategoriaLivro(const std::string& categoria): Valida uma categoria de livro.
+    - validarCategoriaAluno(const std::string& categoria): Valida uma categoria de aluno.
 Instruções de instalação:
 
     - Certifique-se de ter um compilador C++ instalado no seu sistema. 
