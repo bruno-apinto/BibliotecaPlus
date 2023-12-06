@@ -18,6 +18,7 @@ public:
 
 private:
     static void validarStringNaoVazia(const std::string& valor, const std::string& mensagemErro);
+    bool ehTelefoneValido(const std::string& telefone);
 };
 
 #endif // BARRICADAS_ENTRADAS_H
